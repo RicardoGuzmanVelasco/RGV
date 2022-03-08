@@ -51,18 +51,19 @@ namespace RGV.Math.Runtime.Roman
 
         int ToInt()
         {
-            var sum = symbols.
-                Where(s => Symbols.ContainsKey(s))
-                .Sum(s => Symbols[s]);
-            if(sum > 0)
-                return sum; 
-
-            return symbols switch
+            if(symbols.Length == 1)
+                return Symbols[symbols.Single()];
+            
+            var total = new RomanNumeral(""+symbols.Last()).ToInt();
+            for(var i = symbols.Length - 2; i >= 0; i--)
             {
-                "IV" => 4,
-                "IX" => 9,
-                _ => 0
-            };
+                var addend = new RomanNumeral("" + symbols[i]).ToInt();
+                if(Symbols[symbols[i + 1]] > Symbols[symbols[i]])
+                    addend *= -1;
+                total += addend;
+            }
+
+            return total;
         }
         
         static readonly Dictionary<char, int> Symbols = new Dictionary<char, int>

@@ -69,7 +69,6 @@ namespace RGV.Math.Tests
         }
         #endregion
         
-        
         #region To number, Partition & EquivalenceClasses
         [TestCase("I", 1)]
         [TestCase("V", 5)]
@@ -88,6 +87,21 @@ namespace RGV.Math.Tests
         [TestCase("VI", 6)]
         [TestCase("CLV", 155)]
         public void NonSubstractive_IsEquivalentTo_ItsSymbolsSum(string symbols, int number)
+        {
+            FromRomanNumeralToNumber(symbols, number);
+        }
+
+        [TestCase("IV", 4)]
+        [TestCase("IX", 9)]
+        public void JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction(string symbols, int number)
+        {
+            FromRomanNumeralToNumber(symbols, number);
+        }
+
+        [TestCase("CMIV", 904)]
+        [TestCase("MDCCLXXIV", 1774)]
+        [TestCase("MCMXCIX", 1999)]
+        public void SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded(string symbols, int number)
         {
             FromRomanNumeralToNumber(symbols, number);
         }
