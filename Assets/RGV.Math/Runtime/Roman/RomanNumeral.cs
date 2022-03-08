@@ -34,6 +34,11 @@ namespace RGV.Math.Runtime.Roman
             return new RomanNumeral(symbols);
         }
 
+        public static implicit operator int(RomanNumeral source)
+        {
+            return source.ToInt();
+        }
+
         public override string ToString()
         {
             return symbols;
@@ -44,6 +49,22 @@ namespace RGV.Math.Runtime.Roman
             return symbols.LongestContiguous() >= 4;
         }
 
+        int ToInt()
+        {
+            var sum = symbols.
+                Where(s => Symbols.ContainsKey(s))
+                .Sum(s => Symbols[s]);
+            if(sum > 0)
+                return sum; 
+
+            return symbols switch
+            {
+                "IV" => 4,
+                "IX" => 9,
+                _ => 0
+            };
+        }
+        
         static readonly Dictionary<char, int> Symbols = new Dictionary<char, int>
         {
             ['I'] = 1,

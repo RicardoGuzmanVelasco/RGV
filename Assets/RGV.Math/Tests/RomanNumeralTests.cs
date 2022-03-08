@@ -68,5 +68,40 @@ namespace RGV.Math.Tests
             sut.Should().Be(new RomanNumeral("CMII"));
         }
         #endregion
+        
+        
+        #region To number, Partition & EquivalenceClasses
+        [TestCase("I", 1)]
+        [TestCase("V", 5)]
+        [TestCase("X", 10)]
+        [TestCase("L", 50)]
+        [TestCase("C", 100)]
+        [TestCase("D", 500)]
+        [TestCase("M", 1000)]
+        public void RomanSymbols_RespectivelyEquivalent_ToNumbers(string symbols, int number)
+        {
+            FromRomanNumeralToNumber(symbols, number);
+        }
+
+        [TestCase("II", 2)]
+        [TestCase("III", 3)]
+        [TestCase("VI", 6)]
+        [TestCase("CLV", 155)]
+        public void NonSubstractive_IsEquivalentTo_ItsSymbolsSum(string symbols, int number)
+        {
+            FromRomanNumeralToNumber(symbols, number);
+        }
+        #endregion
+        
+        #region SupportMethods
+        static void FromRomanNumeralToNumber(string symbols, int number)
+        {
+            var sut = new RomanNumeral(symbols);
+
+            int result = sut;
+
+            result.Should().Be(number);
+        }
+        #endregion
     }
 }
