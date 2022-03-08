@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using RGV.Extensions.Runtime;
 
-namespace RGV.Math.Runtime.Roman
+namespace Assets.RGV.Math.Runtime.Roman
 {
     public record RomanNumeral
     {
-        public readonly string symbols;
-        
+        readonly string symbols;
+
         #region Constructors
         public RomanNumeral() : this("I") { }
 
@@ -17,7 +18,7 @@ namespace RGV.Math.Runtime.Roman
                 throw new ArgumentOutOfRangeException(nameof(symbols));
             if(IsAdditiveNotation(symbols))
                 throw new NotSupportedException("Additive notation is not supported");
-            
+
             this.symbols = symbols;
         }
 
@@ -30,17 +31,9 @@ namespace RGV.Math.Runtime.Roman
 
         static bool IsAdditiveNotation(string symbols)
         {
-            var maxRepeatedFollowingSymbols = 1;
-
-            for(var i = 0; i < symbols.Length - 1; i++)
-                if(symbols[i] == symbols[i + 1])
-                    maxRepeatedFollowingSymbols++;
-                else
-                    maxRepeatedFollowingSymbols = 0;
-
-            return maxRepeatedFollowingSymbols >= 4;
+            return symbols.LongestContiguous() >= 4;
         }
-        
+
         static readonly Dictionary<char, int> Symbols = new Dictionary<char, int>
         {
             ['I'] = 1,
