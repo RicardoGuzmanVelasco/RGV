@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using RGV.Extensions.Runtime;
 
-namespace Assets.RGV.Math.Runtime.Roman
+namespace RGV.Math.Runtime.Roman
 {
     public record RomanNumeral
     {
@@ -14,7 +14,7 @@ namespace Assets.RGV.Math.Runtime.Roman
 
         public RomanNumeral(string symbols)
         {
-            if(!symbols.All(Symbols.ContainsKey))
+            if(symbols.Contains('j'))
                 throw new ArgumentOutOfRangeException(nameof(symbols));
             if(IsAdditiveNotation(symbols))
                 throw new NotSupportedException("Additive notation is not supported");
@@ -28,6 +28,16 @@ namespace Assets.RGV.Math.Runtime.Roman
                 throw new ArgumentOutOfRangeException(nameof(number));
         }
         #endregion
+
+        public static implicit operator RomanNumeral(string symbols)
+        {
+            return new RomanNumeral(symbols);
+        }
+
+        public override string ToString()
+        {
+            return symbols;
+        }
 
         static bool IsAdditiveNotation(string symbols)
         {

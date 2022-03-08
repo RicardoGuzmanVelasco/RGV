@@ -1,7 +1,7 @@
 using System;
-using Assets.RGV.Math.Runtime.Roman;
 using FluentAssertions;
 using NUnit.Framework;
+using RGV.Math.Runtime.Roman;
 
 namespace RGV.Math.Tests
 {
@@ -48,6 +48,24 @@ namespace RGV.Math.Tests
         {
             Action act = () => new RomanNumeral(nonPositive);
             act.Should().ThrowExactly<ArgumentOutOfRangeException>();
+        }
+        #endregion
+        
+        #region Formatting
+        [Test]
+        public void RomanNumeral_ToString_ByRomanSymbols()
+        {
+            var sut = new RomanNumeral("XLVIII");
+
+            sut.ToString().Should().Be("XLVIII");
+        }
+
+        [Test]
+        public void RomanNumeral_Implicit_FromString()
+        {
+            RomanNumeral sut = "CMII";
+
+            sut.Should().Be(new RomanNumeral("CMII"));
         }
         #endregion
     }
