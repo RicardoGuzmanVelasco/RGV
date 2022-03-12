@@ -9,8 +9,15 @@ namespace RGV.Math.Runtime.Roman
     {
         List<RomanSymbol> Symbols { get; }
 
+        static bool IsAdditiveNotation(string symbols)
+        {
+            return symbols.LongestContiguous() >= 4;
+        }
+
         #region Constructors
-        public RomanNumeral() : this("I") { }
+        public RomanNumeral() : this("I")
+        {
+        }
 
         public RomanNumeral(string symbols)
         {
@@ -27,14 +34,7 @@ namespace RGV.Math.Runtime.Roman
             if(number <= 0)
                 throw new ArgumentOutOfRangeException(nameof(number));
 
-            var factors = new List<RomanNumeral>();
-            for(var i = 0; i < number.ToString().Length; i++)
-            {
-                var factor = int.Parse(number.ToString().Reverse().ToList()[i].ToString()) * (int)System.Math.Pow(10, i);
-                factors.Add(FromNumber(factor));
-            }
-
-            factors.Reverse();
+            var factors = number.FactorizeBase10().Select(FromNumber);
 
             Symbols = new List<RomanSymbol>();
             foreach(var factor in factors)
@@ -132,10 +132,5 @@ namespace RGV.Math.Runtime.Roman
             return Symbols.GetHashCode();
         }
         #endregion
-        
-        static bool IsAdditiveNotation(string symbols)
-        {
-            return symbols.LongestContiguous() >= 4;
-        }
     }
 }

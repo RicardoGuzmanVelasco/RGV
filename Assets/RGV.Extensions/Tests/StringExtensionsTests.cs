@@ -1,4 +1,3 @@
-using System;
 using FluentAssertions;
 using NUnit.Framework;
 using RGV.Extensions.Runtime;
@@ -15,11 +14,11 @@ namespace RGV.Extensions.Tests
         }
 
 
-        [Test]
-        public void LongestContiguous_OfEmptyOrNull_IsZero()
+        [TestCase("")]
+        [TestCase(null)]
+        public void LongestContiguous_OfNoChars_IsZero(string sut)
         {
-            string.Empty.LongestContiguous().Should().Be(0);
-            ((string)null).LongestContiguous().Should().Be(0);
+            sut.LongestContiguous().Should().Be(0);
         }
 
         [TestCase("aabbbaa", 3)]
