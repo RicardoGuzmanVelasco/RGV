@@ -148,29 +148,4 @@ namespace RGV.Math.Tests
         }
         #endregion
     }
-
-    public class RomanNumeralExhaustiveTests
-    {
-        [DatapointSource]
-        IEnumerable<int> RomanAptNumbers
-        {
-            get
-            {
-                for(var i = 1; i < 4000; i++)
-                    yield return i;
-            }
-        }
-
-        [Theory]
-        public void Conversion_FromAptNumber(int number)
-        {
-            var sut1 = new RomanNumeral(number);
-            var sut2 = new RomanNumeral(sut1.ToString());
-
-            int result = sut1;
-
-            result.Should().Be(number);
-            sut1.Should().Be(sut2);
-        }
-    }
 }
