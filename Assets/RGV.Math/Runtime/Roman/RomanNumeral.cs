@@ -9,10 +9,12 @@ namespace RGV.Math.Runtime.Roman
     {
         List<RomanSymbol> Symbols { get; }
 
+        #region Support methods
         static bool IsAdditiveNotation(string symbols)
         {
             return symbols.LongestContiguous() >= 4;
         }
+        #endregion
 
         #region Constructors
         public RomanNumeral() : this("I")

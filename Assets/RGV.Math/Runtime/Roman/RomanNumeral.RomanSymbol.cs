@@ -23,6 +23,7 @@ namespace RGV.Math.Runtime.Roman
 
             readonly char symbol;
 
+            #region Constructors
             public RomanSymbol(char source)
             {
                 if(!IsSymbol(source))
@@ -30,6 +31,14 @@ namespace RGV.Math.Runtime.Roman
 
                 symbol = source;
             }
+            #endregion
+
+            #region IComparable implementation
+            public int CompareTo(RomanSymbol other)
+            {
+                return ToInt().CompareTo(other.ToInt());
+            }
+            #endregion
 
             public static bool IsSymbol(char c)
             {
@@ -46,6 +55,7 @@ namespace RGV.Math.Runtime.Roman
                 return new RomanSymbol(Values.Last(rs => rs.Value <= number).Key);
             }
 
+            #region Conversions
             public static implicit operator int(RomanSymbol r)
             {
                 return r.ToInt();
@@ -56,15 +66,11 @@ namespace RGV.Math.Runtime.Roman
                 return Values[symbol];
             }
 
-            public int CompareTo(RomanSymbol other)
-            {
-                return ToInt().CompareTo(other.ToInt());
-            }
-
             public override string ToString()
             {
                 return symbol.ToString();
             }
+            #endregion
         }
     }
 }
