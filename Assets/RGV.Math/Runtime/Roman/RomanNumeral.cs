@@ -7,7 +7,7 @@ namespace RGV.Math.Runtime.Roman
 {
     public sealed partial class RomanNumeral
     {
-        IList<RomanSymbol> Symbols { get; }
+        List<RomanSymbol> Symbols { get; }
 
         #region Constructors
         public RomanNumeral() : this("I") { }
@@ -27,7 +27,18 @@ namespace RGV.Math.Runtime.Roman
             if(number <= 0)
                 throw new ArgumentOutOfRangeException(nameof(number));
 
-            Symbols = FromNumber(number).Symbols;
+            var factors = new List<RomanNumeral>();
+            for(var i = 0; i < number.ToString().Length; i++)
+            {
+                var factor = int.Parse(number.ToString().Reverse().ToList()[i].ToString()) * (int)System.Math.Pow(10, i);
+                factors.Add(FromNumber(factor));
+            }
+
+            factors.Reverse();
+
+            Symbols = new List<RomanSymbol>();
+            foreach(var factor in factors)
+                Symbols.AddRange(factor.Symbols);
         }
         #endregion
 
@@ -118,7 +129,7 @@ namespace RGV.Math.Runtime.Roman
 
         public override int GetHashCode()
         {
-            return Symbols != null ? Symbols.GetHashCode() : 0;
+            return Symbols.GetHashCode();
         }
         #endregion
         

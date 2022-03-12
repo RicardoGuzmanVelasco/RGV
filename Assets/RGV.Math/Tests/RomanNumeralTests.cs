@@ -126,7 +126,9 @@ namespace RGV.Math.Tests
             TestEquality(number, symbols);
         }
         
-        // [TestCase(19, "XIX")]
+        [TestCase(19, "XIX")]
+        [TestCase(2904, "MMCMIV")]
+        [TestCase(3549, "MMMDXLIX")]
         public void RomanNumeral_CreatedFromNumber_BothAdditiveAndSubstractive(int number, string symbols)
         {
             TestEquality(number, symbols);
