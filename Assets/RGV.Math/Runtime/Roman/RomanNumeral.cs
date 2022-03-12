@@ -83,7 +83,7 @@ namespace RGV.Math.Runtime.Roman
         static RomanNumeral FromNumber(int number)
         {
             return NeedsSustractiveSymbols(number)
-                ? FromSubstractiveNumber(number)
+                ? FromSubtractiveNumber(number)
                 : new RomanNumeral(FactorizeCharsFromNumber(number));
         }
 
@@ -106,7 +106,7 @@ namespace RGV.Math.Runtime.Roman
             return result;
         }
 
-        static RomanNumeral FromSubstractiveNumber(int number)
+        static RomanNumeral FromSubtractiveNumber(int number)
         {
             var subtrahend = RomanSymbol.ClosestHigherTo(number);
             var minuend = new RomanNumeral(subtrahend - number);

@@ -86,14 +86,14 @@ namespace RGV.Math.Tests
         [TestCase("III", 3)]
         [TestCase("VI", 6)]
         [TestCase("CLV", 155)]
-        public void NonSubstractive_IsEquivalentTo_ItsSymbolsSum(string symbols, int number)
+        public void NonSubtractive_IsEquivalentTo_ItsSymbolsSum(string symbols, int number)
         {
             TestEquality(symbols, number);
         }
 
         [TestCase("IV", 4)]
         [TestCase("IX", 9)]
-        public void JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction(string symbols, int number)
+        public void JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction(string symbols, int number)
         {
             TestEquality(symbols, number);
         }
@@ -101,7 +101,7 @@ namespace RGV.Math.Tests
         [TestCase("CMIV", 904)]
         [TestCase("MDCCLXXIV", 1774)]
         [TestCase("MCMXCIX", 1999)]
-        public void SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded(string symbols, int number)
+        public void SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded(string symbols, int number)
         {
             TestEquality(symbols, number);
         }
@@ -121,7 +121,7 @@ namespace RGV.Math.Tests
         
         [TestCase(4, "IV")]
         [TestCase(900, "CM")]
-        public void RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(int number, string symbols)
+        public void RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(int number, string symbols)
         {
             TestEquality(number, symbols);
         }
@@ -129,7 +129,7 @@ namespace RGV.Math.Tests
         [TestCase(19, "XIX")]
         [TestCase(2904, "MMCMIV")]
         [TestCase(3549, "MMMDXLIX")]
-        public void RomanNumeral_CreatedFromNumber_BothAdditiveAndSubstractive(int number, string symbols)
+        public void RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(int number, string symbols)
         {
             TestEquality(number, symbols);
         }
