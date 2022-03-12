@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace RGV.Extensions.Runtime
 {
     public static class StringExtensions
@@ -6,15 +9,30 @@ namespace RGV.Extensions.Runtime
         {
             if(string.IsNullOrEmpty(source))
                 return 0;
-            
-            var maxRepeatedFollowingChars = 1;
-            for(var i = 0; i < source.Length - 1; i++)
-                if(source[i] == source[i + 1])
-                    maxRepeatedFollowingChars++;
-                else
-                    maxRepeatedFollowingChars = 1;
 
-            return maxRepeatedFollowingChars;
+            var combos = new List<string>();
+            while(source.Length > 0)
+            {
+                var combo = NextCombo(source);
+                combos.Add(combo);
+                source = source[combo.Length..];
+            }
+            
+            return combos.Max(s => s.Length);
+
+            string NextCombo(string s)
+            {
+                var combo = s.First().ToString();
+                for(var i = 1; i < s.Length; i++)
+                {
+                    if(s[i] == combo.Last())
+                        combo += s[i];
+                    else
+                        break;
+                }
+
+                return combo;
+            }
         } 
     }
 }
