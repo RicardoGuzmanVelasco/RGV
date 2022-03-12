@@ -5,11 +5,9 @@ using RGV.Extensions.Runtime;
 
 namespace RGV.Math.Runtime.Roman
 {
-    public record RomanNumeral
+    public sealed partial class RomanNumeral
     {
-        readonly string chars;
-
-        IList<RomanSymbol> Symbols => chars.Select(c => new RomanSymbol(c)).ToList();
+        IList<RomanSymbol> Symbols { get; }
 
         #region Constructors
         public RomanNumeral() : this("I") { }
@@ -21,7 +19,7 @@ namespace RGV.Math.Runtime.Roman
             if(IsAdditiveNotation(symbols))
                 throw new NotSupportedException("Additive notation is not supported");
 
-            chars = symbols;
+            Symbols = symbols.Select(c => new RomanSymbol(c)).ToList();
         }
 
         public RomanNumeral(int number)
@@ -29,7 +27,7 @@ namespace RGV.Math.Runtime.Roman
             if(number <= 0)
                 throw new ArgumentOutOfRangeException(nameof(number));
 
-            chars = FromNumber(number).chars;
+            Symbols = FromNumber(number).Symbols;
         }
         #endregion
 
@@ -46,16 +44,16 @@ namespace RGV.Math.Runtime.Roman
 
         public override string ToString()
         {
-            return chars;
+            return Symbols.Aggregate(string.Empty, (s, symbol) => s + symbol);
         }
-        
+
         int ToNumber()
         {
-            if(chars.Length == 1)
+            if(Symbols.Count == 1)
                 return Symbols.Single();
 
             int total = Symbols.Last();
-            for(var i = chars.Length - 2; i >= 0; i--)
+            for(var i = Symbols.Count - 2; i >= 0; i--)
             {
                 int addend = Symbols[i];
                 if(NextSymbolIsLower(i))
@@ -73,24 +71,20 @@ namespace RGV.Math.Runtime.Roman
 
         static RomanNumeral FromNumber(int number)
         {
-            var result = "";
-
-            if(NeedsSustractiveSymbols(number))
-                return FromSubstractiveNumber(number);
-            
-            while(number > 0)
-            {
-                var symbol = RomanSymbol.ClosestLowerOrEqualTo(number);
-                result += symbol;
-                number -= symbol;
-            }
-
-            return new RomanNumeral(result);
+            return NeedsSustractiveSymbols(number)
+                ? FromSubstractiveNumber(number)
+                : new RomanNumeral(CharsFromNumber(number));
         }
 
         static bool NeedsSustractiveSymbols(int number)
         {
+            return IsAdditiveNotation(CharsFromNumber(number));
+        }
+
+        static string CharsFromNumber(int number)
+        {
             var result = "";
+
             while(number > 0)
             {
                 var symbol = RomanSymbol.ClosestLowerOrEqualTo(number);
@@ -98,80 +92,48 @@ namespace RGV.Math.Runtime.Roman
                 number -= symbol;
             }
 
-            return IsAdditiveNotation(result);
+            return result;
         }
 
         static RomanNumeral FromSubstractiveNumber(int number)
         {
-            return new RomanNumeral("I" + RomanSymbol.ClosestHigherTo(number));
+            var subtrahend = RomanSymbol.ClosestHigherTo(number);
+            var minuend = new RomanNumeral(subtrahend - number);
+
+            var symbols = minuend + subtrahend.ToString();
+            return new RomanNumeral(symbols);
         }
         #endregion
 
+        #region Equality
+        public override bool Equals(object obj)
+        {
+            return obj is RomanNumeral other && Equals(other);
+        }
+
+        bool Equals(RomanNumeral other)
+        {
+            if(Symbols.Count != other.Symbols.Count)
+                return false;
+
+            for(int i = 0; i < Symbols.Count; i++)
+            {
+                if(!Symbols[i].Equals(other.Symbols[i]))
+                    return false;
+            }
+
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+            return Symbols != null ? Symbols.GetHashCode() : 0;
+        }
+        #endregion
+        
         static bool IsAdditiveNotation(string symbols)
         {
             return symbols.LongestContiguous() >= 4;
         }
-
-        #region Nested
-        record RomanSymbol : IComparable<RomanSymbol>
-        {
-            #region Static members
-            static readonly Dictionary<char, int> Values = new Dictionary<char, int>
-            {
-                ['I'] = 1,
-                ['V'] = 5,
-                ['X'] = 10,
-                ['L'] = 50,
-                ['C'] = 100,
-                ['D'] = 500,
-                ['M'] = 1000
-            };
-            #endregion
-            
-            readonly char symbol;
-
-            public RomanSymbol(char source)
-            {
-                if(!IsSymbol(source))
-                    throw new ArgumentOutOfRangeException();
-                
-                symbol = source;
-            }
-
-            public static bool IsSymbol(char c)
-            {
-                return Values.ContainsKey(c);
-            }
-
-            public static RomanSymbol ClosestHigherTo(int number)
-            {
-                return new RomanSymbol(Values.First(rs => rs.Value > number).Key);
-            }
-            public static RomanSymbol ClosestLowerOrEqualTo(int number)
-            {
-                return new RomanSymbol(Values.Last(rs => rs.Value <= number).Key);
-            }
-
-            public static implicit operator int(RomanSymbol r)
-            {
-                return r.ToInt();
-            }
-
-            int ToInt()
-            {
-                return Values[symbol];
-            }
-
-            public int CompareTo(RomanSymbol other)
-            {
-                return ToInt().CompareTo(other.ToInt());
-            }
-
-            public override string ToString()
-            {
-                return symbol.ToString();
-            }
-        }
-        #endregion
     }
 }

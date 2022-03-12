@@ -120,8 +120,14 @@ namespace RGV.Math.Tests
         }
         
         [TestCase(4, "IV")]
-        [TestCase(9, "IX")]
+        [TestCase(900, "CM")]
         public void RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(int number, string symbols)
+        {
+            new RomanNumeral(number).Should().Be(new RomanNumeral(symbols));
+        }
+        
+        // [TestCase(19, "XIX")]
+        public void RomanNumeral_CreatedFromNumber_BothAdditiveAndSubstractive(int number, string symbols)
         {
             new RomanNumeral(number).Should().Be(new RomanNumeral(symbols));
         }
