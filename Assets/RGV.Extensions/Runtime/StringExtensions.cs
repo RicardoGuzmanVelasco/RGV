@@ -12,7 +12,7 @@ namespace RGV.Extensions.Runtime
                 if(source[i] == source[i + 1])
                     maxRepeatedFollowingChars++;
                 else
-                    maxRepeatedFollowingChars = 0;
+                    maxRepeatedFollowingChars = 1;
 
             return maxRepeatedFollowingChars;
         } 

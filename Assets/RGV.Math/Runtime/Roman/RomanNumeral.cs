@@ -28,6 +28,8 @@ namespace RGV.Math.Runtime.Roman
         {
             if(number <= 0)
                 throw new ArgumentOutOfRangeException(nameof(number));
+
+            chars = FromNumber(number).chars;
         }
         #endregion
 
@@ -39,7 +41,7 @@ namespace RGV.Math.Runtime.Roman
 
         public static implicit operator int(RomanNumeral source)
         {
-            return source.ToInt();
+            return source.ToNumber();
         }
 
         public override string ToString()
@@ -47,7 +49,7 @@ namespace RGV.Math.Runtime.Roman
             return chars;
         }
         
-        int ToInt()
+        int ToNumber()
         {
             if(chars.Length == 1)
                 return Symbols.Single();
@@ -68,6 +70,41 @@ namespace RGV.Math.Runtime.Roman
                 return Symbols[index + 1] > Symbols[index];
             }
         }
+
+        static RomanNumeral FromNumber(int number)
+        {
+            var result = "";
+
+            if(NeedsSustractiveSymbols(number))
+                return FromSubstractiveNumber(number);
+            
+            while(number > 0)
+            {
+                var symbol = RomanSymbol.ClosestLowerOrEqualTo(number);
+                result += symbol;
+                number -= symbol;
+            }
+
+            return new RomanNumeral(result);
+        }
+
+        static bool NeedsSustractiveSymbols(int number)
+        {
+            var result = "";
+            while(number > 0)
+            {
+                var symbol = RomanSymbol.ClosestLowerOrEqualTo(number);
+                result += symbol;
+                number -= symbol;
+            }
+
+            return IsAdditiveNotation(result);
+        }
+
+        static RomanNumeral FromSubstractiveNumber(int number)
+        {
+            return new RomanNumeral("I" + RomanSymbol.ClosestHigherTo(number));
+        }
         #endregion
 
         static bool IsAdditiveNotation(string symbols)
@@ -78,7 +115,8 @@ namespace RGV.Math.Runtime.Roman
         #region Nested
         record RomanSymbol : IComparable<RomanSymbol>
         {
-            public static readonly Dictionary<char, int> Values = new Dictionary<char, int>
+            #region Static members
+            static readonly Dictionary<char, int> Values = new Dictionary<char, int>
             {
                 ['I'] = 1,
                 ['V'] = 5,
@@ -88,6 +126,7 @@ namespace RGV.Math.Runtime.Roman
                 ['D'] = 500,
                 ['M'] = 1000
             };
+            #endregion
             
             readonly char symbol;
 
@@ -104,6 +143,15 @@ namespace RGV.Math.Runtime.Roman
                 return Values.ContainsKey(c);
             }
 
+            public static RomanSymbol ClosestHigherTo(int number)
+            {
+                return new RomanSymbol(Values.First(rs => rs.Value > number).Key);
+            }
+            public static RomanSymbol ClosestLowerOrEqualTo(int number)
+            {
+                return new RomanSymbol(Values.Last(rs => rs.Value <= number).Key);
+            }
+
             public static implicit operator int(RomanSymbol r)
             {
                 return r.ToInt();
@@ -117,6 +165,11 @@ namespace RGV.Math.Runtime.Roman
             public int CompareTo(RomanSymbol other)
             {
                 return ToInt().CompareTo(other.ToInt());
+            }
+
+            public override string ToString()
+            {
+                return symbol.ToString();
             }
         }
         #endregion
