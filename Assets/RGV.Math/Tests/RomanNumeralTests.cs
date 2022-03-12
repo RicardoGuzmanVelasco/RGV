@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
 using RGV.Math.Runtime.Roman;
@@ -146,5 +147,30 @@ namespace RGV.Math.Tests
             sut.Should().Be(number);
         }
         #endregion
+    }
+
+    public class RomanNumeralExhaustiveTests
+    {
+        [DatapointSource]
+        IEnumerable<int> RomanAptNumbers
+        {
+            get
+            {
+                for(var i = 1; i < 4000; i++)
+                    yield return i;
+            }
+        }
+
+        [Theory]
+        public void Conversion_FromAptNumber(int number)
+        {
+            var sut1 = new RomanNumeral(number);
+            var sut2 = new RomanNumeral(sut1.ToString());
+
+            int result = sut1;
+
+            result.Should().Be(number);
+            sut1.Should().Be(sut2);
+        }
     }
 }
