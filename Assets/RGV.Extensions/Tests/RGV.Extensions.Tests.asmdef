@@ -1,11 +1,11 @@
 {
-    "name": "RGV.Math.Tests",
+    "name": "RGV.Extensions.Tests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "BoundfoxStudios.FluentAssertions",
-        "RGV.Math"
+        "RGV.Extensions"
     ],
     "includePlatforms": [
         "Editor"
