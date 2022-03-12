@@ -79,7 +79,7 @@ namespace RGV.Math.Tests
         [TestCase("M", 1000)]
         public void RomanSymbols_RespectivelyEquivalent_ToNumbers(string symbols, int number)
         {
-            Conversion(symbols, number);
+            TestEquality(symbols, number);
         }
 
         [TestCase("II", 2)]
@@ -88,14 +88,14 @@ namespace RGV.Math.Tests
         [TestCase("CLV", 155)]
         public void NonSubstractive_IsEquivalentTo_ItsSymbolsSum(string symbols, int number)
         {
-            Conversion(symbols, number);
+            TestEquality(symbols, number);
         }
 
         [TestCase("IV", 4)]
         [TestCase("IX", 9)]
         public void JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction(string symbols, int number)
         {
-            Conversion(symbols, number);
+            TestEquality(symbols, number);
         }
 
         [TestCase("CMIV", 904)]
@@ -103,7 +103,7 @@ namespace RGV.Math.Tests
         [TestCase("MCMXCIX", 1999)]
         public void SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded(string symbols, int number)
         {
-            Conversion(symbols, number);
+            TestEquality(symbols, number);
         }
         #endregion
         
@@ -123,18 +123,22 @@ namespace RGV.Math.Tests
         [TestCase(900, "CM")]
         public void RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(int number, string symbols)
         {
-            new RomanNumeral(number).Should().Be(new RomanNumeral(symbols));
+            TestEquality(number, symbols);
         }
         
         // [TestCase(19, "XIX")]
         public void RomanNumeral_CreatedFromNumber_BothAdditiveAndSubstractive(int number, string symbols)
         {
-            new RomanNumeral(number).Should().Be(new RomanNumeral(symbols));
+            TestEquality(number, symbols);
         }
         #endregion
         
         #region SupportMethods
-        static void Conversion(string symbols, int number)
+        static void TestEquality(int number, string symbols)
+        {
+            new RomanNumeral(number).Should().Be(new RomanNumeral(symbols));
+        }
+        static void TestEquality(string symbols, int number)
         {
             int sut = new RomanNumeral(symbols);
             sut.Should().Be(number);

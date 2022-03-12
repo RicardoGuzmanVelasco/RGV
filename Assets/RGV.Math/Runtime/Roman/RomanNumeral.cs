@@ -73,15 +73,15 @@ namespace RGV.Math.Runtime.Roman
         {
             return NeedsSustractiveSymbols(number)
                 ? FromSubstractiveNumber(number)
-                : new RomanNumeral(CharsFromNumber(number));
+                : new RomanNumeral(FactorizeCharsFromNumber(number));
         }
 
         static bool NeedsSustractiveSymbols(int number)
         {
-            return IsAdditiveNotation(CharsFromNumber(number));
+            return IsAdditiveNotation(FactorizeCharsFromNumber(number));
         }
 
-        static string CharsFromNumber(int number)
+        static string FactorizeCharsFromNumber(int number)
         {
             var result = "";
 
@@ -113,16 +113,7 @@ namespace RGV.Math.Runtime.Roman
 
         bool Equals(RomanNumeral other)
         {
-            if(Symbols.Count != other.Symbols.Count)
-                return false;
-
-            for(int i = 0; i < Symbols.Count; i++)
-            {
-                if(!Symbols[i].Equals(other.Symbols[i]))
-                    return false;
-            }
-
-            return true;
+            return Symbols.SequenceEqual(other.Symbols);
         }
 
         public override int GetHashCode()
