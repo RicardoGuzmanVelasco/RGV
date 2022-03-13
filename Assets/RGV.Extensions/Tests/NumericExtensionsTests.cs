@@ -9,6 +9,7 @@ namespace RGV.Extensions.Tests
         [Test]
         public void FactorizeBase10()
         {
+            0.FactorizeBase10().Should().BeEmpty();
             1.FactorizeBase10().Should().BeEquivalentTo(1);
             10.FactorizeBase10().Should().BeEquivalentTo(10);
             11.FactorizeBase10().Should().ContainInOrder(10, 1);

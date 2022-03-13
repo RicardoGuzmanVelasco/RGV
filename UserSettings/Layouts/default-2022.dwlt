@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1278
     height: 1381
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Test Runner
   m_RootView: {fileID: 9}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -71,10 +71,10 @@ MonoBehaviour:
     y: 0
     width: 315
     height: 1331
-  m_MinSize: {x: 201, y: 342}
-  m_MaxSize: {x: 4001, y: 8042}
+  m_MinSize: {x: 100, y: 200}
+  m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 381
+  controlID: 70
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,10 +122,10 @@ MonoBehaviour:
     y: 0
     width: 490
     height: 1331
-  m_MinSize: {x: 232, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 100, y: 200}
+  m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 300
+  controlID: 18
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 0
     width: 490
     height: 566
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -173,10 +173,10 @@ MonoBehaviour:
     y: 30
     width: 1278
     height: 1331
-  m_MinSize: {x: 533, y: 492}
-  m_MaxSize: {x: 22099, y: 14042}
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 379
+  controlID: 68
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,8 +196,8 @@ MonoBehaviour:
     y: 0
     width: 473
     height: 1331
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 17}
@@ -226,7 +226,7 @@ MonoBehaviour:
     y: 0
     width: 1278
     height: 1381
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -253,7 +253,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Mini
+  m_LastLoadedLayoutName: 
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,10 +296,10 @@ MonoBehaviour:
     y: 0
     width: 805
     height: 1331
-  m_MinSize: {x: 433, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 380
+  controlID: 69
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,8 +319,8 @@ MonoBehaviour:
     y: 0
     width: 315
     height: 887
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -385,7 +385,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 453
+    ID: 173
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -451,9 +451,9 @@ MonoBehaviour:
       uniqueId: '[RGV][suite]'
       name: RGV
       fullName: RGV
-      resultStatus: 2
-      duration: 0.7099768
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.6531776
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -463,13 +463,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1034
-      uniqueId: '[RGV.MathTests.dll][suite]'
-      name: RGV.MathTests.dll
-      fullName: D:/Documentos/Documentos/Unity/RGV/Library/ScriptAssemblies/RGV.MathTests.dll
-      resultStatus: 2
-      duration: 0.6891711
-      messages: One or more child tests had errors
+    - id: 1010
+      uniqueId: '[RGV.Extensions.Tests.dll][suite]'
+      name: RGV.Extensions.Tests.dll
+      fullName: D:/Documentos/Documentos/Unity/RGV/Library/ScriptAssemblies/RGV.Extensions.Tests.dll
+      resultStatus: 1
+      duration: 0.5539841
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -479,13 +479,13 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[RGV][suite]'
-    - id: 1035
-      uniqueId: RGV.MathTests.dll/[RGV][suite]
+    - id: 1011
+      uniqueId: RGV.Extensions.Tests.dll/[RGV][suite]
       name: RGV
       fullName: RGV
-      resultStatus: 2
-      duration: 0.5978335
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.4624583
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -493,15 +493,297 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1034
-      parentUniqueId: '[RGV.MathTests.dll][suite]'
-    - id: 1036
-      uniqueId: RGV.MathTests.dll/RGV/[Math][suite]
+      parentId: 1010
+      parentUniqueId: '[RGV.Extensions.Tests.dll][suite]'
+    - id: 1012
+      uniqueId: RGV.Extensions.Tests.dll/RGV/[Extensions][suite]
+      name: Extensions
+      fullName: RGV.Extensions
+      resultStatus: 1
+      duration: 0.3624412
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1011
+      parentUniqueId: RGV.Extensions.Tests.dll/[RGV][suite]
+    - id: 1013
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/[RGV.Extensions.Tests][RGV.Extensions.Tests][suite]
+      name: Tests
+      fullName: RGV.Extensions.Tests
+      resultStatus: 1
+      duration: 0.2632436
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1012
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/[Extensions][suite]
+    - id: 1001
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests][suite]
+      name: NumericExtensionsTests
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests
+      resultStatus: 1
+      duration: 0.1619152
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1017
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/[RGV.Extensions.Tests][RGV.Extensions.Tests][suite]
+    - id: 1002
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.FactorizeBase10]
+      name: FactorizeBase10
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.FactorizeBase10
+      resultStatus: 1
+      duration: 0.0519942
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests][suite]
+    - id: 1001
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests][suite]
+      name: StringExtensionsTests
+      fullName: RGV.Extensions.Tests.StringExtensionsTests
+      resultStatus: 1
+      duration: 0.2278292
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1013
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/[RGV.Extensions.Tests][RGV.Extensions.Tests][suite]
+    - id: 1008
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount][suite]
+      name: LongestContiguous_OfMixed_IgnoresTotalCount
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount
+      resultStatus: 1
+      duration: 0.1165235
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests][suite]
+    - id: 1006
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/LongestContiguous_OfMixed_IgnoresTotalCount/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount("aabbbaa",3)]
+      name: LongestContiguous_OfMixed_IgnoresTotalCount("aabbbaa",3)
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount("aabbbaa",3)
+      resultStatus: 1
+      duration: 0.0110598
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount][suite]
+    - id: 1007
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/LongestContiguous_OfMixed_IgnoresTotalCount/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount("120012012",2)]
+      name: LongestContiguous_OfMixed_IgnoresTotalCount("120012012",2)
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount("120012012",2)
+      resultStatus: 1
+      duration: 0.0002362
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount][suite]
+    - id: 1007
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero][suite]
+      name: LongestContiguous_OfNoChars_IsZero
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero
+      resultStatus: 1
+      duration: 0.004021
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests][suite]
+    - id: 1005
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/LongestContiguous_OfNoChars_IsZero/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero("")]
+      name: LongestContiguous_OfNoChars_IsZero("")
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero("")
+      resultStatus: 1
+      duration: 0.000409
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero][suite]
+    - id: 1006
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/LongestContiguous_OfNoChars_IsZero/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero(null)]
+      name: LongestContiguous_OfNoChars_IsZero(null)
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero(null)
+      resultStatus: 1
+      duration: 0.0001208
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero][suite]
+    - id: 1004
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength][suite]
+      name: LongestContiguous_OfSameCharRepeated_IsSameThanLength
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength
+      resultStatus: 1
+      duration: 0.003158
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests][suite]
+    - id: 1002
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/LongestContiguous_OfSameCharRepeated_IsSameThanLength/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength("
+        ")]
+      name: LongestContiguous_OfSameCharRepeated_IsSameThanLength(" ")
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength("
+        ")
+      resultStatus: 1
+      duration: 0.000348
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength][suite]
+    - id: 1003
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/LongestContiguous_OfSameCharRepeated_IsSameThanLength/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength("5555")]
+      name: LongestContiguous_OfSameCharRepeated_IsSameThanLength("5555")
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength("5555")
+      resultStatus: 1
+      duration: 0.0001147
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength][suite]
+    - id: 1009
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/StringExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_TakesCount_OfLastChainInString]
+      name: LongestContiguous_TakesCount_OfLastChainInString
+      fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_TakesCount_OfLastChainInString
+      resultStatus: 1
+      duration: 0.0002148
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.StringExtensionsTests][suite]
+    - id: 1061
+      uniqueId: '[RGV.Math.Tests.dll][suite]'
+      name: RGV.Math.Tests.dll
+      fullName: D:/Documentos/Documentos/Unity/RGV/Library/ScriptAssemblies/RGV.Math.Tests.dll
+      resultStatus: 1
+      duration: 0.6431187
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[RGV][suite]'
+    - id: 1062
+      uniqueId: RGV.Math.Tests.dll/[RGV][suite]
+      name: RGV
+      fullName: RGV
+      resultStatus: 1
+      duration: 0.5460906
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1061
+      parentUniqueId: '[RGV.Math.Tests.dll][suite]'
+    - id: 1063
+      uniqueId: RGV.Math.Tests.dll/RGV/[Math][suite]
       name: Math
       fullName: RGV.Math
-      resultStatus: 2
-      duration: 0.4982639
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.4456238
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -509,15 +791,15 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1035
-      parentUniqueId: RGV.MathTests.dll/[RGV][suite]
-    - id: 1037
-      uniqueId: RGV.MathTests.dll/RGV/Math/[RGV.MathTests][RGV.Math.Tests][suite]
+      parentId: 1062
+      parentUniqueId: RGV.Math.Tests.dll/[RGV][suite]
+    - id: 1064
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/[RGV.Math.Tests][RGV.Math.Tests][suite]
       name: Tests
       fullName: RGV.Math.Tests
-      resultStatus: 2
-      duration: 0.3982278
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.3461309
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -525,15 +807,48 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1036
-      parentUniqueId: RGV.MathTests.dll/RGV/[Math][suite]
-    - id: 1001
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
+      parentId: 1063
+      parentUniqueId: RGV.Math.Tests.dll/RGV/[Math][suite]
+    - id: 1018
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.FizzBuzzTests][suite]
+      name: FizzBuzzTests
+      fullName: RGV.Math.Tests.FizzBuzzTests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/[RGV.Math.Tests][RGV.Math.Tests][suite]
+    - id: 1019
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/FizzBuzzTests/[RGV.Math.Tests][RGV.Math.Tests.FizzBuzzTests.METHOD]
+      name: METHOD
+      fullName: RGV.Math.Tests.FizzBuzzTests.METHOD
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.FizzBuzzTests][suite]
+    - id: 1014
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
       name: RomanNumeralTests
       fullName: RGV.Math.Tests.RomanNumeralTests
-      resultStatus: 2
-      duration: 0.2981221
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.2465866
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -541,14 +856,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1037
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/[RGV.MathTests][RGV.Math.Tests][suite]
-    - id: 1008
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
+      parentId: 1064
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/[RGV.Math.Tests][RGV.Math.Tests][suite]
+    - id: 1021
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
       name: AdditiveNotation_IsNotSupported
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported
       resultStatus: 1
-      duration: 0.118339
+      duration: 0.1005824
       messages: 
       output: 
       stacktrace: 
@@ -557,14 +872,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1005
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/AdditiveNotation_IsNotSupported/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("IIII")]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1018
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/AdditiveNotation_IsNotSupported/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("IIII")]
       name: AdditiveNotation_IsNotSupported("IIII")
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("IIII")
       resultStatus: 1
-      duration: 0.0145206
+      duration: 0.0002061
       messages: 
       output: 
       stacktrace: 
@@ -574,14 +889,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1008
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
-    - id: 1006
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/AdditiveNotation_IsNotSupported/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("XXXX")]
+      parentId: 1021
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
+    - id: 1019
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/AdditiveNotation_IsNotSupported/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("XXXX")]
       name: AdditiveNotation_IsNotSupported("XXXX")
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("XXXX")
       resultStatus: 1
-      duration: 0.0003031
+      duration: 0.0001533
       messages: 
       output: 
       stacktrace: 
@@ -591,14 +906,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1008
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
-    - id: 1007
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/AdditiveNotation_IsNotSupported/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("CCCC")]
+      parentId: 1021
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
+    - id: 1020
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/AdditiveNotation_IsNotSupported/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("CCCC")]
       name: AdditiveNotation_IsNotSupported("CCCC")
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("CCCC")
       resultStatus: 1
-      duration: 0.0001447
+      duration: 0.0001244
       messages: 
       output: 
       stacktrace: 
@@ -608,14 +923,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1008
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
-    - id: 1004
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.Constructor_EffectivelyTakes_RomanSymbols]
+      parentId: 1021
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported][suite]
+    - id: 1017
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.Constructor_EffectivelyTakes_RomanSymbols]
       name: Constructor_EffectivelyTakes_RomanSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.Constructor_EffectivelyTakes_RomanSymbols
       resultStatus: 1
-      duration: 0.0007323
+      duration: 0.0000915
       messages: 
       output: 
       stacktrace: 
@@ -625,14 +940,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1003
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.Constructor_Fails_IfNotJustRomanSymbols]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1016
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.Constructor_Fails_IfNotJustRomanSymbols]
       name: Constructor_Fails_IfNotJustRomanSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.Constructor_Fails_IfNotJustRomanSymbols
       resultStatus: 1
-      duration: 0.0033101
+      duration: 0.0001254
       messages: 
       output: 
       stacktrace: 
@@ -642,14 +957,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1029
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction][suite]
-      name: JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction
-      fullName: RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1042
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction][suite]
+      name: JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction
+      fullName: RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction
       resultStatus: 1
-      duration: 0.0090938
+      duration: 0.0043269
       messages: 
       output: 
       stacktrace: 
@@ -658,14 +973,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1027
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)]
-      name: JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)
-      fullName: RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1040
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)]
+      name: JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)
+      fullName: RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)
       resultStatus: 1
-      duration: 0.0036476
+      duration: 0.0002448
       messages: 
       output: 
       stacktrace: 
@@ -675,14 +990,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1029
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction][suite]
-    - id: 1028
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)]
-      name: JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)
-      fullName: RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)
+      parentId: 1042
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction][suite]
+    - id: 1041
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)]
+      name: JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)
+      fullName: RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)
       resultStatus: 1
-      duration: 0.0002442
+      duration: 0.0001568
       messages: 
       output: 
       stacktrace: 
@@ -692,14 +1007,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1029
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.JustSubstractive_IsEquivalentTo_ItsReversedSymbolsSubstraction][suite]
-    - id: 1026
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum][suite]
-      name: NonSubstractive_IsEquivalentTo_ItsSymbolsSum
-      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum
+      parentId: 1042
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction][suite]
+    - id: 1039
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum][suite]
+      name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum
+      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum
       resultStatus: 1
-      duration: 0.0050753
+      duration: 0.0058573
       messages: 
       output: 
       stacktrace: 
@@ -708,14 +1023,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1022
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubstractive_IsEquivalentTo_ItsSymbolsSum/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("II",2)]
-      name: NonSubstractive_IsEquivalentTo_ItsSymbolsSum("II",2)
-      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("II",2)
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1035
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubtractive_IsEquivalentTo_ItsSymbolsSum/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("II",2)]
+      name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("II",2)
+      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("II",2)
       resultStatus: 1
-      duration: 0.0003323
+      duration: 0.0002295
       messages: 
       output: 
       stacktrace: 
@@ -725,14 +1040,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum][suite]
-    - id: 1023
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubstractive_IsEquivalentTo_ItsSymbolsSum/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("III",3)]
-      name: NonSubstractive_IsEquivalentTo_ItsSymbolsSum("III",3)
-      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("III",3)
+      parentId: 1039
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum][suite]
+    - id: 1036
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubtractive_IsEquivalentTo_ItsSymbolsSum/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("III",3)]
+      name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("III",3)
+      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("III",3)
       resultStatus: 1
-      duration: 0.0001464
+      duration: 0.00011
       messages: 
       output: 
       stacktrace: 
@@ -742,48 +1057,48 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1026
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum][suite]
+      parentId: 1039
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum][suite]
+    - id: 1037
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubtractive_IsEquivalentTo_ItsSymbolsSum/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("VI",6)]
+      name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("VI",6)
+      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("VI",6)
+      resultStatus: 1
+      duration: 0.0000945
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1039
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum][suite]
+    - id: 1038
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubtractive_IsEquivalentTo_ItsSymbolsSum/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)]
+      name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)
+      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)
+      resultStatus: 1
+      duration: 0.0001376
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1039
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum][suite]
     - id: 1024
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubstractive_IsEquivalentTo_ItsSymbolsSum/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("VI",6)]
-      name: NonSubstractive_IsEquivalentTo_ItsSymbolsSum("VI",6)
-      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("VI",6)
-      resultStatus: 1
-      duration: 0.0000913
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1026
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum][suite]
-    - id: 1025
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/NonSubstractive_IsEquivalentTo_ItsSymbolsSum/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)]
-      name: NonSubstractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)
-      fullName: RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)
-      resultStatus: 1
-      duration: 0.0001546
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1026
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.NonSubstractive_IsEquivalentTo_ItsSymbolsSum][suite]
-    - id: 1011
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive][suite]
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive][suite]
       name: RomanNumeral_CreatedByNumber_MustBePositive
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive
       resultStatus: 1
-      duration: 0.0044184
+      duration: 0.0038453
       messages: 
       output: 
       stacktrace: 
@@ -792,14 +1107,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1009
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedByNumber_MustBePositive/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(0)]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1022
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedByNumber_MustBePositive/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(0)]
       name: RomanNumeral_CreatedByNumber_MustBePositive(0)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(0)
       resultStatus: 1
-      duration: 0.0007383
+      duration: 0.0002892
       messages: 
       output: 
       stacktrace: 
@@ -809,14 +1124,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1011
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive][suite]
-    - id: 1010
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedByNumber_MustBePositive/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(-1)]
+      parentId: 1024
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive][suite]
+    - id: 1023
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedByNumber_MustBePositive/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(-1)]
       name: RomanNumeral_CreatedByNumber_MustBePositive(-1)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(-1)
       resultStatus: 1
-      duration: 0.0001167
+      duration: 0.0001854
       messages: 
       output: 
       stacktrace: 
@@ -826,14 +1141,81 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1011
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive][suite]
-    - id: 1038
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
+      parentId: 1024
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive][suite]
+    - id: 1060
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive][suite]
+      name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive
+      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive
+      resultStatus: 1
+      duration: 0.005599
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1057
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(19,"XIX")]
+      name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(19,"XIX")
+      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(19,"XIX")
+      resultStatus: 1
+      duration: 0.0003032
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1060
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive][suite]
+    - id: 1058
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(2904,"MMCMIV")]
+      name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(2904,"MMCMIV")
+      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(2904,"MMCMIV")
+      resultStatus: 1
+      duration: 0.0002825
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1060
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive][suite]
+    - id: 1059
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(3549,"MMMDXLIX")]
+      name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(3549,"MMMDXLIX")
+      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(3549,"MMMDXLIX")
+      resultStatus: 1
+      duration: 0.0003416
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1060
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive][suite]
+    - id: 1053
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols
       resultStatus: 1
-      duration: 0.00711
+      duration: 0.0070823
       messages: 
       output: 
       stacktrace: 
@@ -842,14 +1224,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1034
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1,"I")]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1047
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1,"I")]
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1,"I")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1,"I")
       resultStatus: 1
-      duration: 0.002405
+      duration: 0.0003319
       messages: 
       output: 
       stacktrace: 
@@ -859,14 +1241,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1035
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
-    - id: 1035
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(2,"II")]
+      parentId: 1053
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
+    - id: 1048
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(2,"II")]
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(2,"II")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(2,"II")
       resultStatus: 1
-      duration: 0.0001262
+      duration: 0.0001664
       messages: 
       output: 
       stacktrace: 
@@ -876,14 +1258,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1036
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
-    - id: 1036
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(3,"III")]
+      parentId: 1053
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
+    - id: 1049
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(3,"III")]
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(3,"III")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(3,"III")
       resultStatus: 1
-      duration: 0.0000867
+      duration: 0.0002537
       messages: 
       output: 
       stacktrace: 
@@ -893,14 +1275,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1037
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
-    - id: 1037
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(5,"V")]
+      parentId: 1053
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
+    - id: 1050
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(5,"V")]
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(5,"V")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(5,"V")
       resultStatus: 1
-      duration: 0.0000805
+      duration: 0.0003011
       messages: 
       output: 
       stacktrace: 
@@ -910,14 +1292,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1040
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
-    - id: 1038
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(11,"XI")]
+      parentId: 1053
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
+    - id: 1051
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(11,"XI")]
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(11,"XI")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(11,"XI")
       resultStatus: 1
-      duration: 0.000083
+      duration: 0.0002749
       messages: 
       output: 
       stacktrace: 
@@ -927,14 +1309,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1040
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
-    - id: 1039
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1565,"MDLXV")]
+      parentId: 1053
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
+    - id: 1052
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1565,"MDLXV")]
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1565,"MDLXV")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1565,"MDLXV")
       resultStatus: 1
-      duration: 0.0000874
+      duration: 0.0003212
       messages: 
       output: 
       stacktrace: 
@@ -944,15 +1326,15 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1040
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
-    - id: 1043
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols][suite]
-      name: RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols
-      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols
-      resultStatus: 2
-      duration: 0.0283571
-      messages: One or more child tests had errors
+      parentId: 1053
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols][suite]
+    - id: 1056
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols][suite]
+      name: RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols
+      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols
+      resultStatus: 1
+      duration: 0.0034854
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -960,14 +1342,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1041
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(4,"IV")]
-      name: RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(4,"IV")
-      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(4,"IV")
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1054
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(4,"IV")]
+      name: RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(4,"IV")
+      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(4,"IV")
       resultStatus: 1
-      duration: 0.0009257
+      duration: 0.0002091
       messages: 
       output: 
       stacktrace: 
@@ -977,14 +1359,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1043
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols][suite]
-    - id: 1042
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(9,"IX")]
-      name: RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(9,"IX")
-      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(9,"IX")
+      parentId: 1056
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols][suite]
+    - id: 1055
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(900,"CM")]
+      name: RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(900,"CM")
+      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(900,"CM")
       resultStatus: 1
-      duration: 0.0001592
+      duration: 0.0001338
       messages: 
       output: 
       stacktrace: 
@@ -994,62 +1376,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1043
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols][suite]
-    - id: 1043
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(40,"XL")]
-      name: RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(40,"XL")
-      fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols(40,"XL")
-      resultStatus: 2
-      duration: 0.0235164
-      messages: Expected object to be XL, but found IL.
-      output: 
-      stacktrace: 'at FluentAssertions.Execution.LateBoundTestFramework.Throw (System.String
-        message) [0x0003d] in D:\Documentos\Documentos\Unity\RGV\Library\PackageCache\com.boundfoxstudios.fluentassertions@58a427c777\Editor\FluentAssertions\Execution\LateBoundTestFramework.cs:21
-
-        at
-        FluentAssertions.Execution.TestFrameworkProvider.Throw (System.String message)
-        [0x00019] in D:\Documentos\Documentos\Unity\RGV\Library\PackageCache\com.boundfoxstudios.fluentassertions@58a427c777\Editor\FluentAssertions\Execution\TestFrameworkProvider.cs:40
-
-        at
-        FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure (System.String
-        message) [0x00001] in D:\Documentos\Documentos\Unity\RGV\Library\PackageCache\com.boundfoxstudios.fluentassertions@58a427c777\Editor\FluentAssertions\Execution\DefaultAssertionStrategy.cs:29
-
-        at
-        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
-        failReasonFunc) [0x0004d] in D:\Documentos\Documentos\Unity\RGV\Library\PackageCache\com.boundfoxstudios.fluentassertions@58a427c777\Editor\FluentAssertions\Execution\AssertionScope.cs:223
-
-        at
-        FluentAssertions.Execution.AssertionScope.FailWith (System.Func`1[TResult]
-        failReasonFunc) [0x00015] in D:\Documentos\Documentos\Unity\RGV\Library\PackageCache\com.boundfoxstudios.fluentassertions@58a427c777\Editor\FluentAssertions\Execution\AssertionScope.cs:196
-
-        at
-        FluentAssertions.Execution.AssertionScope.FailWith (System.String message,
-        System.Object[] args) [0x00015] in D:\Documentos\Documentos\Unity\RGV\Library\PackageCache\com.boundfoxstudios.fluentassertions@58a427c777\Editor\FluentAssertions\Execution\AssertionScope.cs:238
-
-        at
-        FluentAssertions.Primitives.ObjectAssertions.Be (System.Object expected,
-        System.String because, System.Object[] becauseArgs) [0x00001] in D:\Documentos\Documentos\Unity\RGV\Library\PackageCache\com.boundfoxstudios.fluentassertions@58a427c777\Editor\FluentAssertions\Primitives\ObjectAssertions.cs:31
-
-        at
-        RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols
-        (System.Int32 number, System.String symbols) [0x00001] in D:\Documentos\Documentos\Unity\RGV\Assets\RGV.Math\Tests\RomanNumeralTests.cs:128
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1044
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubstractiveSymbols][suite]
-    - id: 1013
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_Implicit_FromString]
+      parentId: 1056
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols][suite]
+    - id: 1026
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_Implicit_FromString]
       name: RomanNumeral_Implicit_FromString
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_Implicit_FromString
       resultStatus: 1
-      duration: 0.0003566
+      duration: 0.0001303
       messages: 
       output: 
       stacktrace: 
@@ -1059,14 +1393,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1002
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_IsI_ByDefault]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1015
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_IsI_ByDefault]
       name: RomanNumeral_IsI_ByDefault
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_IsI_ByDefault
       resultStatus: 1
-      duration: 0.0001838
+      duration: 0.0000925
       messages: 
       output: 
       stacktrace: 
@@ -1076,14 +1410,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1012
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_ToString_ByRomanSymbols]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1025
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanNumeral_ToString_ByRomanSymbols]
       name: RomanNumeral_ToString_ByRomanSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_ToString_ByRomanSymbols
       resultStatus: 1
-      duration: 0.0016527
+      duration: 0.0001509
       messages: 
       output: 
       stacktrace: 
@@ -1093,14 +1427,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1021
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1034
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers
       resultStatus: 1
-      duration: 0.0057001
+      duration: 0.0058778
       messages: 
       output: 
       stacktrace: 
@@ -1109,14 +1443,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1014
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("I",1)]
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1027
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("I",1)]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("I",1)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("I",1)
       resultStatus: 1
-      duration: 0.0003779
+      duration: 0.0001611
       messages: 
       output: 
       stacktrace: 
@@ -1126,14 +1460,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
-    - id: 1015
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("V",5)]
+      parentId: 1034
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+    - id: 1028
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("V",5)]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("V",5)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("V",5)
       resultStatus: 1
-      duration: 0.0001283
+      duration: 0.0000916
       messages: 
       output: 
       stacktrace: 
@@ -1143,14 +1477,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
-    - id: 1016
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("X",10)]
+      parentId: 1034
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+    - id: 1029
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("X",10)]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("X",10)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("X",10)
       resultStatus: 1
-      duration: 0.0000909
+      duration: 0.0000833
       messages: 
       output: 
       stacktrace: 
@@ -1160,14 +1494,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
-    - id: 1017
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("L",50)]
+      parentId: 1034
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+    - id: 1030
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("L",50)]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("L",50)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("L",50)
       resultStatus: 1
-      duration: 0.0000845
+      duration: 0.000091
       messages: 
       output: 
       stacktrace: 
@@ -1177,14 +1511,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
-    - id: 1018
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("C",100)]
+      parentId: 1034
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+    - id: 1031
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("C",100)]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("C",100)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("C",100)
       resultStatus: 1
-      duration: 0.0001201
+      duration: 0.0000823
       messages: 
       output: 
       stacktrace: 
@@ -1194,14 +1528,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
-    - id: 1019
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("D",500)]
+      parentId: 1034
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+    - id: 1032
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("D",500)]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("D",500)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("D",500)
       resultStatus: 1
-      duration: 0.0001001
+      duration: 0.0000785
       messages: 
       output: 
       stacktrace: 
@@ -1211,14 +1545,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
-    - id: 1020
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("M",1000)]
+      parentId: 1034
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+    - id: 1033
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/RomanSymbols_RespectivelyEquivalent_ToNumbers/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("M",1000)]
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("M",1000)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("M",1000)
       resultStatus: 1
-      duration: 0.0000827
+      duration: 0.0001137
       messages: 
       output: 
       stacktrace: 
@@ -1228,14 +1562,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1021
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
-    - id: 1033
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
-      name: SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded
-      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded
+      parentId: 1034
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers][suite]
+    - id: 1046
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
+      name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded
+      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded
       resultStatus: 1
-      duration: 0.0043016
+      duration: 0.004695
       messages: 
       output: 
       stacktrace: 
@@ -1244,14 +1578,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1001
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests][suite]
-    - id: 1030
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)]
-      name: SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)
-      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)
+      parentId: 1014
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests][suite]
+    - id: 1043
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)]
+      name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)
+      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)
       resultStatus: 1
-      duration: 0.0003619
+      duration: 0.0002726
       messages: 
       output: 
       stacktrace: 
@@ -1261,14 +1595,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1033
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
-    - id: 1031
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)]
-      name: SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)
-      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)
+      parentId: 1046
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
+    - id: 1044
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)]
+      name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)
+      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)
       resultStatus: 1
-      duration: 0.000174
+      duration: 0.0001476
       messages: 
       output: 
       stacktrace: 
@@ -1278,14 +1612,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1033
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
-    - id: 1032
-      uniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)]
-      name: SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)
-      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)
+      parentId: 1046
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
+    - id: 1045
+      uniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)]
+      name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)
+      fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)
       resultStatus: 1
-      duration: 0.0001202
+      duration: 0.0001254
       messages: 
       output: 
       stacktrace: 
@@ -1295,8 +1629,8 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1033
-      parentUniqueId: RGV.MathTests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.MathTests][RGV.Math.Tests.RomanNumeralTests.SomeSubstractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
+      parentId: 1046
+      parentUniqueId: RGV.Math.Tests.dll/RGV/Math/Tests/RomanNumeralTests/[RGV.Math.Tests][RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded][suite]
     m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
@@ -1383,9 +1717,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a510000
-    m_LastClickedID: 20826
-    m_ExpandedIDs: 000000004651000000ca9a3bffffff7f
+    m_SelectedIDs: 7c510000
+    m_LastClickedID: 20860
+    m_ExpandedIDs: 000000005c51000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1413,7 +1747,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004651000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000005c510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1440,7 +1774,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1503,7 +1837,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: -1518
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1541,9 +1875,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 12faffff
       m_LastClickedID: 0
-      m_ExpandedIDs: 7cc6ffff54c7ffff46c8ffff9ec8ffffe2c8ffffbac9ffffaecaffff82cbffff74ccffffc8ccffff10cdffffe4cdffffd8ceffffaccfffff52d1ffff26d2ffff18d3ffff6cd3ffff60d4ffff34d5ffff30d6ffff04d7fffffad7ffffc6d8ffffb8d9ffff1cdaffff6cdaffff38dbffffacdbffff08dcffff2cdcffff7edcffffdadcfffff8dcffff50ddffffacddffffc6ddffff22deffff98deffff9cdefffff0deffff5cdfffff76dfffffcadfffff40e0ffff4ee0ffff94e0ffff0ae1ffff5ae1ffffd0e1ffff00e2ffff1ce2ffffb8e2fffff6e2ffff3ee3ffffaee3ffffb8e3ffff00e4ffff72e4ffff7ae4ffffc2e4ffff3ce5ffff66e5ffff78e5fffff0e5ffff28e6ffff32e6ffffa2e6ffffd6e6ffff26e7ffff52e7ffff7ee7ffffeee7fffffae7ffff22e8ffff9ae8ffffc4e8ffffe2e8ffffaae9ffff9eeaffff52ebffff46ecfffffaecffff0eeeffffc2eeffffb6efffff6af0ffff5ef1ffff12f2ffff06f3ffffbaf3fffffcf3ffffb0f4fffff4f4ffffa8f5ffffa0f6ffff38f7ffff54f7ffff9cf7ffff52f8ffff
+      m_ExpandedIDs: 16fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
