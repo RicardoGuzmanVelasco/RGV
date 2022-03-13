@@ -1,0 +1,16 @@
+{
+    "name": "RGV.Math",
+    "rootNamespace": "",
+    "references": [
+        "guid:bdfd0e9c26954f13a7b7bebc03cb2b4a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}
