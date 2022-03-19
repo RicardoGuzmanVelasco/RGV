@@ -17,23 +17,6 @@ namespace RGV.Extensions.Tests
             37854.FactorizeBase10().Should().ContainInOrder(30000, 7000, 800, 50, 4);
         }
 
-        [TestCase(-1, -1)]
-        [TestCase(int.MinValue, -1)]
-        [TestCase(1, 1)]
-        [TestCase(int.MaxValue, 1)]
-        [TestCase(0, 1)]
-        public void SignByNumber(int number, int expected)
-        {
-            number.Sign().Should().Be(expected);
-        }
-
-        [Test]
-        public void SignByBool()
-        {
-            true.Sign().Should().Be(1);
-            false.Sign().Should().Be(-1);
-        }
-
         [Test]
         public void SignDeclarative()
         {
@@ -44,6 +27,9 @@ namespace RGV.Extensions.Tests
             float.MinValue.Sign().Should().BeNegative();
 
             0.Sign().Should().BePositive();
+
+            true.Sign().Should().BePositive();
+            false.Sign().Should().BeNegative();
         }
     }
 }
