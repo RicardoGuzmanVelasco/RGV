@@ -21,5 +21,20 @@ namespace RGV.Extensions.Runtime
 
             return factors;
         }
+
+        public static int Sign(this int number)
+        {
+            return Sign((float)number);
+        }
+
+        public static int Sign(this bool isPositive)
+        {
+            return Sign(isPositive ? 1 : -1);
+        }
+
+        public static int Sign(this float number)
+        {
+            return number < 0 ? -1 : 1;
+        }
     }
 }
