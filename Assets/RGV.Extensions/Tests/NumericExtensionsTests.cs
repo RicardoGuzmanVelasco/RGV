@@ -1,3 +1,4 @@
+using System;
 using FluentAssertions;
 using NUnit.Framework;
 using RGV.Extensions.Runtime;
@@ -6,6 +7,16 @@ namespace RGV.Extensions.Tests
 {
     public class NumericExtensionsTests
     {
+        [DatapointSource]
+        int[] EqClassesInts => new[]
+        {
+            int.MinValue,
+            -1,
+            0,
+            1,
+            int.MaxValue
+        };
+
         [Test]
         public void FactorizeBase10()
         {
@@ -30,6 +41,14 @@ namespace RGV.Extensions.Tests
 
             true.Sign().Should().BePositive();
             false.Sign().Should().BeNegative();
+        }
+
+        [Theory]
+        public void Sign_IsUnitary(int number)
+        {
+            var sut = number.Sign();
+
+            Math.Abs(sut).Should().Be(1);
         }
     }
 }
