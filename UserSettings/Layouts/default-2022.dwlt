@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 3857
+    x: 1297
     y: 83
-    width: 1230
+    width: 2526
     height: 1324
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Project
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -41,13 +41,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 849
-    width: 303
+    width: 606
     height: 425
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 21}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
@@ -69,12 +69,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 303
+    width: 606
     height: 1274
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 149
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,13 +92,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 542
-    width: 472
+    width: 986
     height: 732
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 16}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -118,14 +118,14 @@ MonoBehaviour:
   - {fileID: 4}
   m_Position:
     serializedVersion: 2
-    x: 303
+    x: 606
     y: 0
-    width: 472
+    width: 986
     height: 1274
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 108
+  controlID: 59
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,15 +143,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 472
+    width: 986
     height: 542
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 20}
+  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,12 +172,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1230
+    width: 2526
     height: 1274
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 36
+  controlID: 142
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,23 +188,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 775
+    x: 1592
     y: 0
-    width: 455
+    width: 934
     height: 1274
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 19}
   m_Panes:
+  - {fileID: 19}
   - {fileID: 17}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 1
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +226,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1230
+    width: 2526
     height: 1324
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -249,7 +251,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1230
+    width: 2526
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -271,7 +273,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 1304
-    width: 1230
+    width: 2526
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -294,12 +296,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 775
+    width: 1592
     height: 1274
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 37
+  controlID: 58
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -310,25 +312,235 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 303
+    width: 606
     height: 849
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 19}
-  - {fileID: 20}
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 2
+  - {fileID: 21}
+  - {fileID: 22}
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687acdc95675db149bf5de5771ecac18, type: 3}
+  m_Name: SpriteEditorWindow
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 360, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Sprite Editor
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1919
+    y: 113
+    width: 968
+    height: 521
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ShowAlpha: 0
+  m_MipLevel: 0
+  m_Zoom: 2.016
+  m_ScrollPosition: {x: 0, y: 0}
+  m_SelectedObject: {fileID: 0}
+  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
+  m_LastUsedModuleTypeName: 
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13984, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Search
+    m_Image: {fileID: -2697246297817819012, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2889
+    y: 113
+    width: 933
+    height: 1253
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_QueryTreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ViewState:
+    providerIds:
+    - calculator
+    - asset
+    - find
+    - scene
+    - menu
+    - static_methods
+    - packages
+    - store
+    - query
+    - settings
+    searchFlags: 1006632962
+    searchText: 
+    forceViewMode: 0
+    sessionId: dd94303dbcc24bfa978d4406ad881785
+    sessionName: 
+    excludeNoneItem: 0
+    tableConfig:
+      id: 
+      name: 
+      columns: []
+    ignoreSaveSearches: 0
+    hideAllGroup: 0
+    windowTitle:
+      m_Text: 
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+    queryBuilderEnabled: 0
+    title: Unity
+    itemSize: 32
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 933
+      height: 1253
+    flags: 0
+    group: 
+    m_SelectHandler:
+      stream: 
+    m_TrackingHandler:
+      stream: 
+    m_FilterHandler:
+      stream: 
+    m_GroupChanged:
+      stream: 
+  m_LastFocusedWindow: {fileID: 18}
+  m_SearchBoxFocus: 1
+  m_SideBarSplitter:
+    side: 0
+    pos: -1
+    active: 0
+    lowerLimit: 0.15
+    upperLimit: 0.25
+    host: {fileID: 15}
+  m_DetailsPanelSplitter:
+    side: 1
+    pos: 466.5
+    active: 0
+    lowerLimit: 0.5
+    upperLimit: 0.8
+    host: {fileID: 15}
+  m_ContextHash: -717134950
+  searchEventStatus: 1
+  m_FilterSearchQueryToggle: 0
+  activeSearchQuery:
+    m_GUID: c2abbee87a3a49e8b0972e9d8fc1b7d9
+    m_Thumbnail: {fileID: 0}
+    m_IsSearchTemplate: 0
+    description: 
+    name: 
+    viewState:
+      providerIds:
+      - calculator
+      - asset
+      - find
+      - scene
+      - menu
+      - static_methods
+      - packages
+      - store
+      - query
+      - settings
+      searchFlags: 436207616
+      searchText: 
+      forceViewMode: 0
+      sessionId: 22127acef052401d992d2ee3f6d47922
+      sessionName: 
+      excludeNoneItem: 0
+      tableConfig:
+        id: 
+        name: 
+        columns: []
+      ignoreSaveSearches: 0
+      hideAllGroup: 0
+      windowTitle:
+        m_Text: 
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      queryBuilderEnabled: 0
+      title: item
+      itemSize: 96
+      position:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      flags: 0
+      group: 
+      m_SelectHandler:
+        stream: 
+      m_TrackingHandler:
+        stream: 
+      m_FilterHandler:
+        stream: 
+      m_GroupChanged:
+        stream: 
+    tableConfig:
+      id: 
+      name: 
+      columns: []
+  m_LeftPanelScrollPosition: {x: 0, y: 0}
+  m_FocusSavedSearchField: 0
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,7 +568,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &15
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,9 +588,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 4632
+    x: 2889
     y: 113
-    width: 454
+    width: 933
     height: 1253
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -445,14 +657,14 @@ MonoBehaviour:
       availableCategories: []
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 15}
+    m_Window: {fileID: 17}
     m_NewResultList:
     - id: 1000
       uniqueId: '[RGV][suite]'
       name: RGV
       fullName: RGV
       resultStatus: 1
-      duration: 0.0914315
+      duration: 0.5888667
       messages: 
       output: 
       stacktrace: 
@@ -468,7 +680,7 @@ MonoBehaviour:
       name: RGV.Extensions.Tests.dll
       fullName: D:/Documentos/Documentos/Unity/RGV/Library/ScriptAssemblies/RGV.Extensions.Tests.dll
       resultStatus: 1
-      duration: 0.0794029
+      duration: 0.5680013
       messages: 
       output: 
       stacktrace: 
@@ -484,7 +696,7 @@ MonoBehaviour:
       name: RGV
       fullName: RGV
       resultStatus: 1
-      duration: 0.0776937
+      duration: 0.4763361
       messages: 
       output: 
       stacktrace: 
@@ -500,7 +712,7 @@ MonoBehaviour:
       name: Extensions
       fullName: RGV.Extensions
       resultStatus: 1
-      duration: 0.0738089
+      duration: 0.3753193
       messages: 
       output: 
       stacktrace: 
@@ -516,7 +728,7 @@ MonoBehaviour:
       name: Tests
       fullName: RGV.Extensions.Tests
       resultStatus: 1
-      duration: 0.0697361
+      duration: 0.2760518
       messages: 
       output: 
       stacktrace: 
@@ -532,7 +744,7 @@ MonoBehaviour:
       name: NumericExtensionsTests
       fullName: RGV.Extensions.Tests.NumericExtensionsTests
       resultStatus: 1
-      duration: 0.0461768
+      duration: 0.1763516
       messages: 
       output: 
       stacktrace: 
@@ -548,7 +760,125 @@ MonoBehaviour:
       name: FactorizeBase10
       fullName: RGV.Extensions.Tests.NumericExtensionsTests.FactorizeBase10
       resultStatus: 1
-      duration: 0.0398983
+      duration: 0.054999
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests][suite]
+    - id: 1009
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary][suite]
+      name: Sign_IsUnitary
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary
+      resultStatus: 1
+      duration: 0.0096415
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests][suite]
+    - id: 1004
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/Sign_IsUnitary/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(int.MinValue)]
+      name: Sign_IsUnitary(int.MinValue)
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(int.MinValue)
+      resultStatus: 1
+      duration: 0.0013651
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary][suite]
+    - id: 1005
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/Sign_IsUnitary/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(-1)]
+      name: Sign_IsUnitary(-1)
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(-1)
+      resultStatus: 1
+      duration: 0.0002727
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary][suite]
+    - id: 1006
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/Sign_IsUnitary/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(0)]
+      name: Sign_IsUnitary(0)
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(0)
+      resultStatus: 1
+      duration: 0.0002074
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary][suite]
+    - id: 1007
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/Sign_IsUnitary/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(1)]
+      name: Sign_IsUnitary(1)
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(1)
+      resultStatus: 1
+      duration: 0.000114
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary][suite]
+    - id: 1008
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/Sign_IsUnitary/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(int.MaxValue)]
+      name: Sign_IsUnitary(int.MaxValue)
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary(int.MaxValue)
+      resultStatus: 1
+      duration: 0.0000998
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.Sign_IsUnitary][suite]
+    - id: 1010
+      uniqueId: RGV.Extensions.Tests.dll/RGV/Extensions/Tests/NumericExtensionsTests/[RGV.Extensions.Tests][RGV.Extensions.Tests.NumericExtensionsTests.SignDeclarative]
+      name: SignDeclarative
+      fullName: RGV.Extensions.Tests.NumericExtensionsTests.SignDeclarative
+      resultStatus: 1
+      duration: 0.0007388
       messages: 
       output: 
       stacktrace: 
@@ -565,7 +895,7 @@ MonoBehaviour:
       name: StringExtensionsTests
       fullName: RGV.Extensions.Tests.StringExtensionsTests
       resultStatus: 1
-      duration: 0.0187098
+      duration: 0.125186
       messages: 
       output: 
       stacktrace: 
@@ -581,7 +911,7 @@ MonoBehaviour:
       name: LongestContiguous_OfMixed_IgnoresTotalCount
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount
       resultStatus: 1
-      duration: 0.0018426
+      duration: 0.1021965
       messages: 
       output: 
       stacktrace: 
@@ -597,7 +927,7 @@ MonoBehaviour:
       name: LongestContiguous_OfMixed_IgnoresTotalCount("aabbbaa",3)
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount("aabbbaa",3)
       resultStatus: 1
-      duration: 0.0005117
+      duration: 0.0007791
       messages: 
       output: 
       stacktrace: 
@@ -614,7 +944,7 @@ MonoBehaviour:
       name: LongestContiguous_OfMixed_IgnoresTotalCount("120012012",2)
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfMixed_IgnoresTotalCount("120012012",2)
       resultStatus: 1
-      duration: 0.000156
+      duration: 0.0003606
       messages: 
       output: 
       stacktrace: 
@@ -631,7 +961,7 @@ MonoBehaviour:
       name: LongestContiguous_OfNoChars_IsZero
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero
       resultStatus: 1
-      duration: 0.0034503
+      duration: 0.0052649
       messages: 
       output: 
       stacktrace: 
@@ -647,7 +977,7 @@ MonoBehaviour:
       name: LongestContiguous_OfNoChars_IsZero("")
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero("")
       resultStatus: 1
-      duration: 0.0004232
+      duration: 0.0006478
       messages: 
       output: 
       stacktrace: 
@@ -664,7 +994,7 @@ MonoBehaviour:
       name: LongestContiguous_OfNoChars_IsZero(null)
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfNoChars_IsZero(null)
       resultStatus: 1
-      duration: 0.0001411
+      duration: 0.0002125
       messages: 
       output: 
       stacktrace: 
@@ -681,7 +1011,7 @@ MonoBehaviour:
       name: LongestContiguous_OfSameCharRepeated_IsSameThanLength
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength
       resultStatus: 1
-      duration: 0.0039346
+      duration: 0.0102983
       messages: 
       output: 
       stacktrace: 
@@ -699,7 +1029,7 @@ MonoBehaviour:
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength("
         ")
       resultStatus: 1
-      duration: 0.0004927
+      duration: 0.0004171
       messages: 
       output: 
       stacktrace: 
@@ -716,7 +1046,7 @@ MonoBehaviour:
       name: LongestContiguous_OfSameCharRepeated_IsSameThanLength("5555")
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_OfSameCharRepeated_IsSameThanLength("5555")
       resultStatus: 1
-      duration: 0.0002722
+      duration: 0.0062744
       messages: 
       output: 
       stacktrace: 
@@ -733,7 +1063,7 @@ MonoBehaviour:
       name: LongestContiguous_TakesCount_OfLastChainInString
       fullName: RGV.Extensions.Tests.StringExtensionsTests.LongestContiguous_TakesCount_OfLastChainInString
       resultStatus: 1
-      duration: 0.0004171
+      duration: 0.0004928
       messages: 
       output: 
       stacktrace: 
@@ -750,7 +1080,7 @@ MonoBehaviour:
       name: RGV.Math.Tests.dll
       fullName: D:/Documentos/Documentos/Unity/RGV/Library/ScriptAssemblies/RGV.Math.Tests.dll
       resultStatus: 1
-      duration: 0.1162125
+      duration: 0.6576621
       messages: 
       output: 
       stacktrace: 
@@ -766,7 +1096,7 @@ MonoBehaviour:
       name: RGV
       fullName: RGV
       resultStatus: 1
-      duration: 0.1155008
+      duration: 0.5729794
       messages: 
       output: 
       stacktrace: 
@@ -782,7 +1112,7 @@ MonoBehaviour:
       name: Math
       fullName: RGV.Math
       resultStatus: 1
-      duration: 0.1117444
+      duration: 0.4737481
       messages: 
       output: 
       stacktrace: 
@@ -798,7 +1128,7 @@ MonoBehaviour:
       name: Tests
       fullName: RGV.Math.Tests
       resultStatus: 1
-      duration: 0.1073467
+      duration: 0.3739507
       messages: 
       output: 
       stacktrace: 
@@ -814,7 +1144,7 @@ MonoBehaviour:
       name: RomanNumeralTests
       fullName: RGV.Math.Tests.RomanNumeralTests
       resultStatus: 1
-      duration: 0.1028733
+      duration: 0.2732745
       messages: 
       output: 
       stacktrace: 
@@ -830,7 +1160,7 @@ MonoBehaviour:
       name: AdditiveNotation_IsNotSupported
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported
       resultStatus: 1
-      duration: 0.0272339
+      duration: 0.1171663
       messages: 
       output: 
       stacktrace: 
@@ -846,7 +1176,7 @@ MonoBehaviour:
       name: AdditiveNotation_IsNotSupported("IIII")
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("IIII")
       resultStatus: 1
-      duration: 0.0218903
+      duration: 0.0131776
       messages: 
       output: 
       stacktrace: 
@@ -863,7 +1193,7 @@ MonoBehaviour:
       name: AdditiveNotation_IsNotSupported("XXXX")
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("XXXX")
       resultStatus: 1
-      duration: 0.0003197
+      duration: 0.0002623
       messages: 
       output: 
       stacktrace: 
@@ -880,7 +1210,7 @@ MonoBehaviour:
       name: AdditiveNotation_IsNotSupported("CCCC")
       fullName: RGV.Math.Tests.RomanNumeralTests.AdditiveNotation_IsNotSupported("CCCC")
       resultStatus: 1
-      duration: 0.0002013
+      duration: 0.0001923
       messages: 
       output: 
       stacktrace: 
@@ -897,7 +1227,7 @@ MonoBehaviour:
       name: Constructor_EffectivelyTakes_RomanSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.Constructor_EffectivelyTakes_RomanSymbols
       resultStatus: 1
-      duration: 0.0018515
+      duration: 0.0020071
       messages: 
       output: 
       stacktrace: 
@@ -914,7 +1244,7 @@ MonoBehaviour:
       name: Constructor_Fails_IfNotJustRomanSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.Constructor_Fails_IfNotJustRomanSymbols
       resultStatus: 1
-      duration: 0.0023323
+      duration: 0.0019463
       messages: 
       output: 
       stacktrace: 
@@ -931,7 +1261,7 @@ MonoBehaviour:
       name: JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction
       fullName: RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction
       resultStatus: 1
-      duration: 0.0044925
+      duration: 0.005949
       messages: 
       output: 
       stacktrace: 
@@ -947,7 +1277,7 @@ MonoBehaviour:
       name: JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)
       fullName: RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IV",4)
       resultStatus: 1
-      duration: 0.0013314
+      duration: 0.0013202
       messages: 
       output: 
       stacktrace: 
@@ -964,7 +1294,7 @@ MonoBehaviour:
       name: JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)
       fullName: RGV.Math.Tests.RomanNumeralTests.JustSubtractive_IsEquivalentTo_ItsReversedSymbolsSubstraction("IX",9)
       resultStatus: 1
-      duration: 0.000127
+      duration: 0.0001758
       messages: 
       output: 
       stacktrace: 
@@ -981,7 +1311,7 @@ MonoBehaviour:
       name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum
       fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum
       resultStatus: 1
-      duration: 0.0046068
+      duration: 0.0043934
       messages: 
       output: 
       stacktrace: 
@@ -997,7 +1327,7 @@ MonoBehaviour:
       name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("II",2)
       fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("II",2)
       resultStatus: 1
-      duration: 0.0005407
+      duration: 0.0003893
       messages: 
       output: 
       stacktrace: 
@@ -1014,7 +1344,7 @@ MonoBehaviour:
       name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("III",3)
       fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("III",3)
       resultStatus: 1
-      duration: 0.0001325
+      duration: 0.0001358
       messages: 
       output: 
       stacktrace: 
@@ -1031,7 +1361,7 @@ MonoBehaviour:
       name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("VI",6)
       fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("VI",6)
       resultStatus: 1
-      duration: 0.0000981
+      duration: 0.0001447
       messages: 
       output: 
       stacktrace: 
@@ -1048,7 +1378,7 @@ MonoBehaviour:
       name: NonSubtractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)
       fullName: RGV.Math.Tests.RomanNumeralTests.NonSubtractive_IsEquivalentTo_ItsSymbolsSum("CLV",155)
       resultStatus: 1
-      duration: 0.0000954
+      duration: 0.0001256
       messages: 
       output: 
       stacktrace: 
@@ -1065,7 +1395,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedByNumber_MustBePositive
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive
       resultStatus: 1
-      duration: 0.0032241
+      duration: 0.0039475
       messages: 
       output: 
       stacktrace: 
@@ -1081,7 +1411,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedByNumber_MustBePositive(0)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(0)
       resultStatus: 1
-      duration: 0.0007548
+      duration: 0.0011662
       messages: 
       output: 
       stacktrace: 
@@ -1098,7 +1428,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedByNumber_MustBePositive(-1)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedByNumber_MustBePositive(-1)
       resultStatus: 1
-      duration: 0.000125
+      duration: 0.0001256
       messages: 
       output: 
       stacktrace: 
@@ -1115,7 +1445,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive
       resultStatus: 1
-      duration: 0.011145
+      duration: 0.0095941
       messages: 
       output: 
       stacktrace: 
@@ -1131,7 +1461,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(19,"XIX")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(19,"XIX")
       resultStatus: 1
-      duration: 0.0067418
+      duration: 0.005059
       messages: 
       output: 
       stacktrace: 
@@ -1148,7 +1478,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(2904,"MMCMIV")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(2904,"MMCMIV")
       resultStatus: 1
-      duration: 0.0006852
+      duration: 0.0003322
       messages: 
       output: 
       stacktrace: 
@@ -1165,7 +1495,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(3549,"MMMDXLIX")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_BothAdditiveAndSubtractive(3549,"MMMDXLIX")
       resultStatus: 1
-      duration: 0.0004626
+      duration: 0.0002787
       messages: 
       output: 
       stacktrace: 
@@ -1182,7 +1512,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols
       resultStatus: 1
-      duration: 0.0111156
+      duration: 0.0058702
       messages: 
       output: 
       stacktrace: 
@@ -1198,7 +1528,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1,"I")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1,"I")
       resultStatus: 1
-      duration: 0.0011838
+      duration: 0.0003538
       messages: 
       output: 
       stacktrace: 
@@ -1215,7 +1545,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(2,"II")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(2,"II")
       resultStatus: 1
-      duration: 0.0005115
+      duration: 0.0001184
       messages: 
       output: 
       stacktrace: 
@@ -1232,7 +1562,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(3,"III")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(3,"III")
       resultStatus: 1
-      duration: 0.0002834
+      duration: 0.0001101
       messages: 
       output: 
       stacktrace: 
@@ -1249,7 +1579,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(5,"V")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(5,"V")
       resultStatus: 1
-      duration: 0.0001713
+      duration: 0.0001682
       messages: 
       output: 
       stacktrace: 
@@ -1266,7 +1596,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(11,"XI")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(11,"XI")
       resultStatus: 1
-      duration: 0.0002215
+      duration: 0.0001025
       messages: 
       output: 
       stacktrace: 
@@ -1283,7 +1613,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1565,"MDLXV")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustAdditiveSymbols(1565,"MDLXV")
       resultStatus: 1
-      duration: 0.0004044
+      duration: 0.0001535
       messages: 
       output: 
       stacktrace: 
@@ -1300,7 +1630,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols
       resultStatus: 1
-      duration: 0.0044418
+      duration: 0.0033291
       messages: 
       output: 
       stacktrace: 
@@ -1316,7 +1646,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(4,"IV")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(4,"IV")
       resultStatus: 1
-      duration: 0.0005064
+      duration: 0.000292
       messages: 
       output: 
       stacktrace: 
@@ -1333,7 +1663,7 @@ MonoBehaviour:
       name: RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(900,"CM")
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(900,"CM")
       resultStatus: 1
-      duration: 0.0002895
+      duration: 0.0001405
       messages: 
       output: 
       stacktrace: 
@@ -1350,7 +1680,7 @@ MonoBehaviour:
       name: RomanNumeral_Implicit_FromString
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_Implicit_FromString
       resultStatus: 1
-      duration: 0.0004487
+      duration: 0.0002868
       messages: 
       output: 
       stacktrace: 
@@ -1367,7 +1697,7 @@ MonoBehaviour:
       name: RomanNumeral_IsI_ByDefault
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_IsI_ByDefault
       resultStatus: 1
-      duration: 0.0004202
+      duration: 0.000194
       messages: 
       output: 
       stacktrace: 
@@ -1384,7 +1714,7 @@ MonoBehaviour:
       name: RomanNumeral_ToString_ByRomanSymbols
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanNumeral_ToString_ByRomanSymbols
       resultStatus: 1
-      duration: 0.0021711
+      duration: 0.0014506
       messages: 
       output: 
       stacktrace: 
@@ -1401,7 +1731,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers
       resultStatus: 1
-      duration: 0.0058261
+      duration: 0.0063732
       messages: 
       output: 
       stacktrace: 
@@ -1417,7 +1747,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("I",1)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("I",1)
       resultStatus: 1
-      duration: 0.0003234
+      duration: 0.0003339
       messages: 
       output: 
       stacktrace: 
@@ -1434,7 +1764,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("V",5)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("V",5)
       resultStatus: 1
-      duration: 0.0001673
+      duration: 0.0000926
       messages: 
       output: 
       stacktrace: 
@@ -1451,7 +1781,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("X",10)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("X",10)
       resultStatus: 1
-      duration: 0.0001513
+      duration: 0.0000836
       messages: 
       output: 
       stacktrace: 
@@ -1468,7 +1798,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("L",50)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("L",50)
       resultStatus: 1
-      duration: 0.0001782
+      duration: 0.0000858
       messages: 
       output: 
       stacktrace: 
@@ -1485,7 +1815,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("C",100)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("C",100)
       resultStatus: 1
-      duration: 0.000203
+      duration: 0.0000865
       messages: 
       output: 
       stacktrace: 
@@ -1502,7 +1832,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("D",500)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("D",500)
       resultStatus: 1
-      duration: 0.0001371
+      duration: 0.0000907
       messages: 
       output: 
       stacktrace: 
@@ -1519,7 +1849,7 @@ MonoBehaviour:
       name: RomanSymbols_RespectivelyEquivalent_ToNumbers("M",1000)
       fullName: RGV.Math.Tests.RomanNumeralTests.RomanSymbols_RespectivelyEquivalent_ToNumbers("M",1000)
       resultStatus: 1
-      duration: 0.000109
+      duration: 0.0001144
       messages: 
       output: 
       stacktrace: 
@@ -1536,7 +1866,7 @@ MonoBehaviour:
       name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded
       fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded
       resultStatus: 1
-      duration: 0.0042431
+      duration: 0.0041206
       messages: 
       output: 
       stacktrace: 
@@ -1552,7 +1882,7 @@ MonoBehaviour:
       name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)
       fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("CMIV",904)
       resultStatus: 1
-      duration: 0.0003655
+      duration: 0.0003981
       messages: 
       output: 
       stacktrace: 
@@ -1569,7 +1899,7 @@ MonoBehaviour:
       name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)
       fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MDCCLXXIV",1774)
       resultStatus: 1
-      duration: 0.0002581
+      duration: 0.0002688
       messages: 
       output: 
       stacktrace: 
@@ -1586,7 +1916,7 @@ MonoBehaviour:
       name: SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)
       fullName: RGV.Math.Tests.RomanNumeralTests.SomeSubtractive_IsEquivalentTo_ItsIndependentSubstractionAdded("MCMXCIX",1999)
       resultStatus: 1
-      duration: 0.0001749
+      duration: 0.0001018
       messages: 
       output: 
       stacktrace: 
@@ -1630,7 +1960,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &16
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1650,9 +1980,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 4160
+    x: 1903
     y: 655
-    width: 470
+    width: 984
     height: 711
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1671,22 +2001,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/com.unity.2d.psdimporter
+    - Assets/RGV.Views
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Packages/com.unity.2d.psdimporter
+  - Assets/RGV.Views
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Documentos\Documentos\Unity\RGV
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 76510000
-    m_LastClickedID: 20854
-    m_ExpandedIDs: 000000005651000000ca9a3bffffff7f
+    m_SelectedIDs: 64510000
+    m_LastClickedID: 20836
+    m_ExpandedIDs: 00000000545100005651000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1714,7 +2044,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000056510000
+    m_ExpandedIDs: 000000005451000056510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1741,7 +2071,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1769,8 +2099,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 212
---- !u!114 &17
+  m_DirectoriesAreaWidth: 545
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1790,10 +2120,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2737
-    y: 129
-    width: 1077
-    height: 1221
+    x: 2889
+    y: 113
+    width: 933
+    height: 1253
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1804,14 +2134,14 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1518
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &18
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1831,9 +2161,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 4160
+    x: 1903
     y: 113
-    width: 470
+    width: 984
     height: 521
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1844,7 +2174,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5cf7ffffc8f7ffff0cf8ffffecf8ffff2ef9ffff7af9ffffc2f9ffff0efaffff1cfbffff
+      m_ExpandedIDs: 24fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1860,7 +2190,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 6}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1868,7 +2198,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &19
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1888,9 +2218,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3857
+    x: 1297
     y: 113
-    width: 302
+    width: 605
     height: 828
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2159,9 +2489,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 279.83533, y: 413.51807, z: -1.6956539}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 279.83533, y: 413.51807, z: -1.6956539}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2211,9 +2541,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 156.5652
     speed: 2
-    m_Value: 10
+    m_Value: 156.5652
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2238,7 +2568,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &20
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2258,10 +2588,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 507
-    y: 94
-    width: 1532
-    height: 790
+    x: 1297
+    y: 113
+    width: 605
+    height: 828
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2272,10 +2602,10 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1532, y: 769}
+  m_TargetSize: {x: 605, y: 807}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
-  m_RenderIMGUI: 0
+  m_RenderIMGUI: 1
   m_EnterPlayModeBehavior: 0
   m_fullscreenMonitorIdx: 0
   m_playModeBehaviorIdx: 0
@@ -2292,10 +2622,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -766
-    m_HBaseRangeMax: 766
-    m_VBaseRangeMin: -384.5
-    m_VBaseRangeMax: 384.5
+    m_HBaseRangeMin: -302.5
+    m_HBaseRangeMax: 302.5
+    m_VBaseRangeMin: -403.5
+    m_VBaseRangeMax: 403.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -2313,23 +2643,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1532
-      height: 769
+      width: 605
+      height: 807
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 766, y: 384.5}
+    m_Translation: {x: 302.5, y: 403.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -766
-      y: -384.5
-      width: 1532
-      height: 769
+      x: -302.5
+      y: -403.5
+      width: 605
+      height: 807
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1532, y: 790}
+  m_LastWindowPixelSize: {x: 605, y: 828}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2337,7 +2667,7 @@ MonoBehaviour:
   m_RenderTexture: {fileID: 0}
   m_showToolbar: 1
   m_showToolbarOnFullscreen: 0
---- !u!114 &21
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2357,9 +2687,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3857
+    x: 1297
     y: 962
-    width: 302
+    width: 605
     height: 404
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
