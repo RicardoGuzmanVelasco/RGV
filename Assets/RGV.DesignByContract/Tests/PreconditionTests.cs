@@ -51,7 +51,7 @@ namespace RGV.DesignByContract.Tests
         }
 
         #region Fixture
-        class ExactlyThisException : Exception { }
+        public class ExactlyThisException : Exception { }
         #endregion
     }
 }

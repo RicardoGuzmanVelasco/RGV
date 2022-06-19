@@ -2,7 +2,7 @@
 
 namespace RGV.DesignByContract.Runtime
 {
-    public static partial class GuardExtensions
+    public static partial class Precondition
     {
         public static int Zero(this Precondition<int> precondition)
         {

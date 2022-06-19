@@ -4,7 +4,7 @@ using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
-    public static partial class GuardExtensions
+    public static partial class Precondition
     {
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
         public static void False(this Precondition<Func<bool>> precondition)

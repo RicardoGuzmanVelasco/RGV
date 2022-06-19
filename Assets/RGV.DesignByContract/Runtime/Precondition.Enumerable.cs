@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
-    public static partial class GuardExtensions
+    public static partial class Precondition
     {
         public static IEnumerable<T> Contains<T>(this Precondition<IEnumerable<T>> precondition, params T[] others)
         {
