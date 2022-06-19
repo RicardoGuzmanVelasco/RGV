@@ -47,7 +47,7 @@ namespace RGV.DesignByContract.Tests
         public void Not_ReturnsNewInstance_ToAvoidAliasing()
         {
             var sut = new Precondition<bool>(true);
-            sut.Not.Not.Should().NotBe(sut);
+            sut.Not.Not.Should().NotBeSameAs(sut);
         }
 
         #region Fixture
