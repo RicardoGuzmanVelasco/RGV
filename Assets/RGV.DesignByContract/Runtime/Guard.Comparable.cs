@@ -67,16 +67,16 @@ namespace RGV.DesignByContract.Runtime
         }
     }
 
-    public static partial class Guard
+    public static partial class Precondition
     {
         [Pure]
-        public static Precondition<T> OnlyIf<T>(T target) where T : IComparable
+        public static Precondition<T> Require<T>(T target) where T : IComparable
         {
             return new Precondition<T>(target);
         }
 
         [Pure]
-        public static Precondition<int> OnlyIf<T>(int target)
+        public static Precondition<int> Require<T>(int target)
             where T : Exception, new()
         {
             return new Precondition<int>(target, new T());

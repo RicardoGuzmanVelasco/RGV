@@ -14,7 +14,7 @@ component Extensions <<ExtensionMethods>> #white{
 
 package RGV.DesignByContract{
 +class Guard <<static>>{
-    +OnlyIf<T>(T): Precondition<T>
+    +Require<T>(T): Precondition<T>
 }
 
 +class Precondition<T>{
@@ -47,7 +47,7 @@ package RGV.DesignByContract{
 
 Guard ..> Precondition
 GuardExtensions .u.> Precondition
-Client .r.> Guard::OnlyIf : Preferred as\nextension\nmethod
+Client .r.> Guard::Require : Preferred as\nextension\nmethod
 Client ..> Precondition::Not
 
 Extensions ..> Precondition::Evaluate

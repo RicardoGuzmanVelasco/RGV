@@ -18,16 +18,16 @@ namespace RGV.DesignByContract.Runtime
         }
     }
 
-    public static partial class Guard
+    public static partial class Precondition
     {
         [Pure]
-        public static Precondition<IEnumerable<T>> OnlyIf<T>(IEnumerable<T> target)
+        public static Precondition<IEnumerable<T>> Require<T>(IEnumerable<T> target)
         {
             return new Precondition<IEnumerable<T>>(target);
         }
 
         [Pure]
-        public static Precondition<IEnumerable<T>> OnlyIf<T, TExc>(IEnumerable<T> target)
+        public static Precondition<IEnumerable<T>> Require<T, TExc>(IEnumerable<T> target)
             where TExc : Exception, new()
         {
             return new Precondition<IEnumerable<T>>(target, new TExc());
