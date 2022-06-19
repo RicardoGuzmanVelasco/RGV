@@ -9,12 +9,28 @@ header DesignByContract
 footer v1.0
 
 component Client #white
-component Extensions <<ExtensionMethods>> #white{
-}
 
 package RGV.DesignByContract{
-+class Guard <<static>>{
-    +Require<T>(T): Precondition<T>
++class "Precondition" as Guard <<static, non-generic façade>>{
+    +{static}Require<T>(T): Precondition<T>
+    
+    +GreaterThan<T>(:Precondition<T>, other:T): T
+        {T is IComparable}
+    +{method}...
+    +Contains<T>(:Precondition<T>, other:T): T
+        {T is IEnumerable}
+    +{method}...
+    +Null<T>(:Precondition<T>): T {T is class}
+    +{method}...
+    +False<T>(:Precondition<<Func<bool>>)
+    +True<T>(:Precondition<bool>)
+    +{method}...
+    ==
+    Any Extension should be decorated with:
+        -- [AssertionMethod]
+        -- [DebuggerStepThrough]
+        -- [DebuggerHidden]
+        -- ...
 }
 
 +class Precondition<T>{
@@ -25,32 +41,17 @@ package RGV.DesignByContract{
     +Evaluate(:Func<T, bool>): bool
     +{static}(:Precondition<T>): T {implicit}
     ==
-    {cannot negate twice}
-    {Not returns this instance}
+    {can negate twice}
+    {'Not' returns other instance}
     {Evaluate cannot receive null}
-}
-+class GuardExtensions <<static>>{
-    +GreaterThan<T>(:Precondition<T>, other:T): T {T is IComparable}
-    +Null<T>(:Precondition<T>): T {T is class}
-    {method}...
-    +False<T>(:Precondition<<Func<bool>>)
-    +True<T>(:Precondition<bool>)
-    {method}...
-    ==
-    Any Extension should be decorated with:
-    [AssertionMethod]
-    [DebuggerStepThrough]
-    [DebuggerHidden]
 }
 }
 '''''''''''''
 
-Guard ..> Precondition
-GuardExtensions .u.> Precondition
+Guard --> Precondition
+Guard ..> Precondition::Evaluate
 Client .r.> Guard::Require : Preferred as\nextension\nmethod
 Client ..> Precondition::Not
-
-Extensions ..> Precondition::Evaluate
 
 '''''''''''''
 
