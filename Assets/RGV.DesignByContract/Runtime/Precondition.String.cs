@@ -7,7 +7,7 @@ namespace RGV.DesignByContract.Runtime
     public static partial class Precondition
     {
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static string NullOrEmpty(this Precondition<string> precondition)
+        public static Precondition<string> NullOrEmpty(this Precondition<string> precondition)
         {
             precondition.Evaluate<ArgumentException>
             (
@@ -18,7 +18,7 @@ namespace RGV.DesignByContract.Runtime
         }
 
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static string NullOrWhiteSpace(this Precondition<string> precondition)
+        public static Precondition<string> NullOrWhiteSpace(this Precondition<string> precondition)
         {
             precondition.Evaluate<ArgumentException>
             (

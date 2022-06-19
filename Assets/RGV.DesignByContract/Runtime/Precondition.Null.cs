@@ -7,7 +7,7 @@ namespace RGV.DesignByContract.Runtime
     public static partial class Precondition
     {
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static T Null<T>(this Precondition<T> precondition)
+        public static Precondition<T> Null<T>(this Precondition<T> precondition)
             where T : class
         {
             precondition.Evaluate<ArgumentNullException>

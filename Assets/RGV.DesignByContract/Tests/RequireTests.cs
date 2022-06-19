@@ -68,7 +68,7 @@ namespace RGV.DesignByContract.Tests
         [Test]
         public void False_NotThrowing()
         {
-            Action act = () => Require(() => true).Not.False();
+            Action act = () => Require(true).Not.False();
             act.Should().NotThrow();
         }
 

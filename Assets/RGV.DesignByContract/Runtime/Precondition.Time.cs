@@ -7,7 +7,7 @@ namespace RGV.DesignByContract.Runtime
     public static partial class Precondition
     {
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static DateTime AtMidnight(this Precondition<DateTime> precondition)
+        public static Precondition<DateTime> AtMidnight(this Precondition<DateTime> precondition)
         {
             precondition.Evaluate
             (

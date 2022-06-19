@@ -7,19 +7,17 @@ namespace RGV.DesignByContract.Runtime
 {
     public static partial class Precondition
     {
-        public static IEnumerable<T> Contains<T>(this Precondition<IEnumerable<T>> precondition, params T[] others)
+        public static Precondition<IEnumerable<T>> Contains<T>(this Precondition<IEnumerable<T>> precondition,
+            params T[] others)
         {
             precondition.Evaluate<ArgumentException>
             (
                 c => others.All(c.Contains)
             );
 
-            return precondition.target;
+            return precondition;
         }
-    }
 
-    public static partial class Precondition
-    {
         [Pure]
         public static Precondition<IEnumerable<T>> Require<T>(IEnumerable<T> target)
         {
