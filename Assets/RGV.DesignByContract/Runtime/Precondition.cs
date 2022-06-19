@@ -4,10 +4,10 @@ namespace RGV.DesignByContract.Runtime
 {
     public class Precondition<T>
     {
-        internal readonly T target;
+        readonly T target;
         bool negated;
 
-        public Exception Throw { get; set; }
+        Exception Throw { get; }
 
         public Precondition<T> Not => CloneThisPreconditionNegated();
 
