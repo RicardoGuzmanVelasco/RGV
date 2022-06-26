@@ -45,28 +45,27 @@ namespace RGV.Math.Tests
         [Test]
         public void FromNotSingleToNotSingle_WithDifferentLength()
         {
-            new Numbig(1000, "zz").Should().Be(new Numbig(1, "aaa"));
-            new Numbig(1000, "zzz").Should().Be(new Numbig(1, "aaaa"));
+            new Numbig("1000zz").Should().Be(new Numbig("1aaa"));
+            new Numbig("1000zzz").Should().Be(new Numbig("1aaaa"));
         }
 
         [Test]
         public void SameLargeNumbersIgnoresCase()
         {
-            new Numbig(1, "T").Should().Be(new Numbig(1, "t"));
-            new Numbig(1, "b").Should().Be(new Numbig(1, "B"));
-            new Numbig(1, "k").Should().Be(new Numbig(1, "K"));
-            new Numbig(1, "aa").Should().Be(new Numbig(1, "AA"));
+            new Numbig("1T").Should().Be(new Numbig("1t"));
+            new Numbig("1b").Should().Be(new Numbig("1B"));
+            new Numbig("1k").Should().Be(new Numbig("1K"));
+            new Numbig("1aa").Should().Be(new Numbig("1AA"));
         }
 
-        [Test]
-        public void IncorrectSuffixes()
+        [TestCase("1d")]
+        [TestCase("xa5z")]
+        [TestCase("t8h3")]
+        [TestCase("2u6")]
+        public void IncorrectParse(string toParse)
         {
             ((Action)(() =>
-                    new Numbig(1, "d")))
-                .Should().Throw<ArgumentException>();
-
-            ((Action)(() =>
-                    new Numbig(1, "a5z")))
+                    new Numbig(toParse)))
                 .Should().Throw<ArgumentException>();
         }
 
@@ -85,7 +84,7 @@ namespace RGV.Math.Tests
         [Test, Ignore("TODO")]
         public void Addition()
         {
-            new Numbig(1, "T").Plus(new Numbig(1, "T")).Should().Be(new Numbig(2, "T"));
+            new Numbig("1T").Plus(new Numbig("1T")).Should().Be(new Numbig("2T"));
         }
 
         [Test, Ignore("TODO to implement addition, then remove")]
