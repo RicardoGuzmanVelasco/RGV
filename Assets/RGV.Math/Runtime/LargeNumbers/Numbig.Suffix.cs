@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,12 +8,13 @@ namespace RGV.Math.Runtime.LargeNumbers
     {
         static readonly IList<string> SingleSuffixes = new[]
         {
-            "",
-            "k",
-            "M",
-            "B",
-            "T"
+            "", "K", "M", "B", "T"
         };
+
+        public static string ToSuffix(string suffix)
+        {
+            return suffix?.ToUpper();
+        }
 
         static string SuffixAfter(string suffix)
         {
@@ -30,16 +32,21 @@ namespace RGV.Math.Runtime.LargeNumbers
 
         static bool NextSuffixIsSingle(string suffix)
         {
-            return SingleSuffixes.Contains(suffix) &&
+            return IsSingle(suffix) &&
                    SingleSuffixes.IndexOf(suffix) < SingleSuffixes.Count - 1;
+        }
+
+        static bool IsSingle(string suffix)
+        {
+            return SingleSuffixes.Contains(suffix, StringComparer.InvariantCultureIgnoreCase);
         }
 
         static string CompoundSuffixAfter(string suffix)
         {
             if(suffix == SingleSuffixes.Last())
-                return "aa";
+                return ToSuffix("aa");
 
-            if(suffix.All(c => c == 'z'))
+            if(suffix.All(c => c.ToString().Equals("z", StringComparison.InvariantCultureIgnoreCase)))
                 return string.Concat(Enumerable.Repeat("a", suffix.Length + 1));
 
             var suffixChars = suffix.ToCharArray();
