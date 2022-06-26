@@ -1,28 +1,20 @@
-using System;
-using System.Linq;
-using static RGV.DesignByContract.Runtime.Precondition;
-
 namespace RGV.Math.Runtime.LargeNumbers
 {
     public readonly partial struct Numbig
     {
         readonly float number;
-        readonly string suffix;
+        readonly Suffix suffix;
 
         public Numbig(float number, string suffix = "")
         {
-            Require<ArgumentException>(suffix.All(char.IsLetter)).True();
-            Require<ArgumentException>(suffix.Length <= 1 == IsSingle(suffix)).True();
-
-            (this.number, this.suffix) = Factorize(number, suffix);
+            (this.number, this.suffix) = Factorize(number, new Suffix(suffix));
         }
 
-        static (float, string) Factorize(float number, string suffix = null)
+        static (float, Suffix) Factorize(float number, Suffix suffix)
         {
-            suffix = ToSuffix(suffix);
             return number < 1000
                 ? (number, suffix)
-                : Factorize(number / 1000, SuffixAfter(suffix));
+                : Factorize(number / 1000, suffix.Next());
         }
 
         public override string ToString()

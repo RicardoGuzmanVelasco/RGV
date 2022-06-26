@@ -1,57 +1,78 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using static RGV.DesignByContract.Runtime.Precondition;
 
 namespace RGV.Math.Runtime.LargeNumbers
 {
     public readonly partial struct Numbig
     {
-        static readonly IList<string> SingleSuffixes = new[]
+        readonly struct Suffix
         {
-            "", "K", "M", "B", "T"
-        };
+            readonly string value;
 
-        public static string ToSuffix(string suffix)
-        {
-            return suffix?.ToUpper();
-        }
+            static readonly IList<string> SingleSuffixes = new[]
+            {
+                "", "K", "M", "B", "T"
+            };
 
-        static string SuffixAfter(string suffix)
-        {
-            suffix ??= "";
-            return !NextSuffixIsSingle(suffix)
-                ? CompoundSuffixAfter(suffix)
-                : SingleSuffixAfter(suffix);
-        }
+            public Suffix([NotNull] string suffix)
+            {
+                Require(suffix.All(char.IsLetter)).True();
+                Require(suffix.Length <= 1 == IsSingle(suffix)).True();
 
-        static string SingleSuffixAfter(string suffix)
-        {
-            var nextSuffixIndex = SingleSuffixes.IndexOf(suffix ?? "") + 1;
-            return SingleSuffixes[nextSuffixIndex];
-        }
+                value = suffix.ToUpper();
+            }
 
-        static bool NextSuffixIsSingle(string suffix)
-        {
-            return IsSingle(suffix) &&
-                   SingleSuffixes.IndexOf(suffix) < SingleSuffixes.Count - 1;
-        }
+            public Suffix Next() => new Suffix(After(this));
 
-        static bool IsSingle(string suffix)
-        {
-            return SingleSuffixes.Contains(suffix, StringComparer.InvariantCultureIgnoreCase);
-        }
+            #region Support methods
+            static string After(Suffix suffix)
+            {
+                return suffix.NextIsSingle()
+                    ? SingleAfter(suffix)
+                    : CompoundAfter(suffix.value);
+            }
 
-        static string CompoundSuffixAfter(string suffix)
-        {
-            if(suffix == SingleSuffixes.Last())
-                return ToSuffix("aa");
+            static string SingleAfter(Suffix suffix)
+            {
+                Require(suffix.NextIsSingle()).True();
 
-            if(suffix.All(c => c.ToString().Equals("z", StringComparison.InvariantCultureIgnoreCase)))
-                return string.Concat(Enumerable.Repeat("a", suffix.Length + 1));
+                var nextSuffixIndex = SingleSuffixes.IndexOf(suffix.value ?? "") + 1;
+                return SingleSuffixes[nextSuffixIndex];
+            }
 
-            var suffixChars = suffix.ToCharArray();
-            suffixChars[^1]++;
-            return new string(suffixChars);
+            static bool IsSingle(string suffix)
+            {
+                return SingleSuffixes.Contains
+                (
+                    suffix,
+                    StringComparer.InvariantCultureIgnoreCase
+                );
+            }
+
+            static string CompoundAfter(string suffix)
+            {
+                if(suffix == SingleSuffixes.Last())
+                    return new Suffix("aa").value;
+
+                if(suffix.All(c => c.ToString().Equals("z", StringComparison.InvariantCultureIgnoreCase)))
+                    return string.Concat(Enumerable.Repeat("a", suffix.Length + 1));
+
+                var suffixChars = suffix.ToCharArray();
+                suffixChars[^1]++;
+                return new string(suffixChars);
+            }
+
+            bool NextIsSingle()
+            {
+                return IsSingle(value) &&
+                       value != SingleSuffixes.Last();
+            }
+            #endregion
+
+            public override string ToString() => value;
         }
     }
 }

@@ -29,7 +29,7 @@ namespace RGV.DesignByContract.Runtime
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
         public static Precondition<bool> True(this Precondition<bool> precondition)
         {
-            precondition.Evaluate<InvalidOperationException>
+            precondition.Evaluate<ArgumentException>
             (
                 b => b
             );

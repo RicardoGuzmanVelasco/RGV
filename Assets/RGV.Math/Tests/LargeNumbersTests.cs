@@ -17,7 +17,6 @@ namespace RGV.Math.Tests
         [Test]
         public void Next()
         {
-            Numbig.ToSuffix("k").Should().Be("K");
             new Numbig(1, "k").Should().Be(new Numbig(1000));
             new Numbig(8, "M").Should().Be(new Numbig(8000, "k"));
             new Numbig(8.513f, "B").Should().Be(new Numbig(8513, "M"));
