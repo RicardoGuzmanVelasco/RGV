@@ -8,24 +8,40 @@ namespace RGV.Math.Runtime.LargeNumbers
 {
     public readonly partial struct Numbig
     {
-        readonly struct Suffix
+        record Suffix
         {
-            readonly string value;
-
             static readonly IList<string> SingleSuffixes = new[]
             {
                 "", "K", "M", "B", "T"
             };
 
+            readonly string value;
+
             public Suffix([NotNull] string suffix)
             {
-                Require(suffix.All(char.IsLetter)).True();
-                Require(suffix.Length <= 1 == IsSingle(suffix)).True();
+                Require(IsSuffix(suffix)).True();
 
                 value = suffix.ToUpper();
             }
 
             public Suffix Next() => new Suffix(After(this));
+
+            public static bool IsSuffix(string suffix)
+            {
+                return IsSingle(suffix) ||
+                       (suffix.Length > 1 && suffix.All(char.IsLetter));
+            }
+
+            public override string ToString() => value;
+
+            public float FactorTo(Suffix other)
+            {
+                float factor;
+                for(factor = 1; this != other; factor *= 1000)
+                    other = other.Next();
+
+                return factor;
+            }
 
             #region Support methods
             static string After(Suffix suffix)
@@ -71,8 +87,6 @@ namespace RGV.Math.Runtime.LargeNumbers
                        value != SingleSuffixes.Last();
             }
             #endregion
-
-            public override string ToString() => value;
         }
     }
 }
