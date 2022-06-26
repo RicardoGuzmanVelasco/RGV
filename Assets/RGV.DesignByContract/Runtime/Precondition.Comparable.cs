@@ -72,7 +72,21 @@ namespace RGV.DesignByContract.Runtime
             return precondition;
         }
 
+        public static Precondition<float> Negative(this Precondition<float> precondition)
+        {
+            precondition.Not.GreaterOrEqualThan(0);
+
+            return precondition;
+        }
+
         public static Precondition<int> Positive(this Precondition<int> precondition)
+        {
+            precondition.Not.LesserOrEqualThan(0);
+
+            return precondition;
+        }
+
+        public static Precondition<float> Positive(this Precondition<float> precondition)
         {
             precondition.Not.LesserOrEqualThan(0);
 

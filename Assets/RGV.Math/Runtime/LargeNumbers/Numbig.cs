@@ -1,3 +1,4 @@
+using System;
 using static RGV.DesignByContract.Runtime.Precondition;
 
 namespace RGV.Math.Runtime.LargeNumbers
@@ -7,8 +8,10 @@ namespace RGV.Math.Runtime.LargeNumbers
         readonly float number;
         readonly Suffix suffix;
 
+        #region Ctors
         public Numbig(float number, string suffix = "")
         {
+            Require(number).Not.Negative();
             Require(Suffix.IsSuffix(suffix)).True();
 
             (this.number, this.suffix) = Factorize(number, new Suffix(suffix));
@@ -21,24 +24,36 @@ namespace RGV.Math.Runtime.LargeNumbers
             number = parsed.number;
             suffix = parsed.suffix;
         }
+        #endregion
 
         static (float, Suffix) Factorize(float number, Suffix suffix)
         {
-            return number < 1000
-                ? (number, suffix)
-                : Factorize(number / 1000, suffix.Next());
-        }
-
-        public override string ToString()
-        {
-            return $"{number}{suffix}";
+            return number switch
+            {
+                0 => (0, new Suffix("")),
+                >= 1000 => Factorize(number / 1000, suffix.Next()),
+                < 1000 and >= 1 => (number, suffix),
+                > 0 and < 1 => Factorize(number * 1000, suffix.Prev()),
+                _ => throw new InvalidOperationException()
+            };
         }
 
         public Numbig Plus(Numbig other)
         {
-            return default;
+            return new Numbig
+            (
+                (number + other.number) * other.suffix.FactorTo(suffix),
+                suffix.value
+            );
         }
 
+        public Numbig ConvertTo(string otherSuffix)
+        {
+            var factor = suffix.FactorTo(new Suffix(otherSuffix));
+            return new Numbig(number / factor, suffix.value);
+        }
+
+        #region Formatting
         public static Numbig Parse(string from)
         {
             var (n, suffix) = SplitNumberAndSuffix(from);
@@ -48,11 +63,21 @@ namespace RGV.Math.Runtime.LargeNumbers
             return new Numbig(number, suffix);
         }
 
+        public override string ToString()
+        {
+            return $"{number}{suffix}";
+        }
+        #endregion
+
         #region Support  methods
         static (string, string) SplitNumberAndSuffix(string from)
         {
             int i;
-            for(i = from.Length - 1; i >= 0 && char.IsLetter(from[i]); i--) ;
+            for(i = from.Length - 1; i >= 0 && char.IsLetter(from[i]); i--)
+            {
+                /*Doesn't need a body*/
+            }
+
             return (from[..(i + 1)], from[(i + 1)..]);
         }
         #endregion

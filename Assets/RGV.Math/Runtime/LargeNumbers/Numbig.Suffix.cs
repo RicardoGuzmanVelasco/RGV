@@ -15,7 +15,7 @@ namespace RGV.Math.Runtime.LargeNumbers
                 "", "K", "M", "B", "T"
             };
 
-            readonly string value;
+            internal readonly string value;
 
             public Suffix([NotNull] string suffix)
             {
@@ -25,6 +25,7 @@ namespace RGV.Math.Runtime.LargeNumbers
             }
 
             public Suffix Next() => new Suffix(After(this));
+            public Suffix Prev() => new Suffix(Before(this));
 
             public static bool IsSuffix(string suffix)
             {
@@ -34,8 +35,11 @@ namespace RGV.Math.Runtime.LargeNumbers
 
             public override string ToString() => value;
 
-            public float FactorTo(Suffix other)
+            internal float FactorTo(Suffix other)
             {
+                if(this < other)
+                    return 1f / other.FactorTo(this);
+
                 float factor;
                 for(factor = 1; this != other; factor *= 1000)
                     other = other.Next();
@@ -43,7 +47,43 @@ namespace RGV.Math.Runtime.LargeNumbers
                 return factor;
             }
 
+            public static bool operator >(Suffix left, Suffix right)
+            {
+                if(IsSingle(left.value) && IsSingle(right.value))
+                    return SingleSuffixes.IndexOf(left.value) > SingleSuffixes.IndexOf(right.value);
+
+                if(IsSingle(right.value))
+                    return true;
+
+                if(IsSingle(left.value))
+                    return false;
+
+                if(left.value.Length != right.value.Length)
+                    return left.value.Length > right.value.Length;
+
+                return string.Compare
+                (
+                    left.value, right.value,
+                    StringComparison.OrdinalIgnoreCase
+                ) > 0;
+            }
+
+            public static bool operator <(Suffix left, Suffix right)
+            {
+                return !(left > right || left == right);
+            }
+
             #region Support methods
+            static string Before(Suffix suffix)
+            {
+                Require(suffix > new Suffix("")).True();
+
+                if(IsSingle(suffix.value))
+                    return SingleSuffixes[SingleSuffixes.IndexOf(suffix.value) - 1];
+
+                throw new NotImplementedException();
+            }
+
             static string After(Suffix suffix)
             {
                 return suffix.NextIsSingle()

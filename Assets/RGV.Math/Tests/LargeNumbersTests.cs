@@ -15,6 +15,12 @@ namespace RGV.Math.Tests
         }
 
         [Test]
+        public void Last()
+        {
+            new Numbig("0.001k").Should().Be(new Numbig(1));
+        }
+
+        [Test]
         public void Next()
         {
             new Numbig("1k").Should().Be(new Numbig(1000));
@@ -81,21 +87,20 @@ namespace RGV.Math.Tests
             Numbig.Parse("1.0al").Should().Be(new Numbig(1, "al"));
         }
 
-        [Test, Ignore("TODO")]
+        [Test]
         public void Addition()
         {
             new Numbig("1T").Plus(new Numbig("1T")).Should().Be(new Numbig("2T"));
+            new Numbig("1k").Plus(new Numbig("500")).Should().Be(new Numbig("1.5k"));
         }
 
-        [Test, Ignore("TODO to implement addition, then remove")]
-        public void METHOD()
+        [Test]
+        public void Conversion()
         {
-            // new Numbig.Suffix("k").FactorTo(new Numbig.Suffix("")).Should().Be(1000);
-            // new Numbig.Suffix("").FactorTo(new Numbig.Suffix("k")).Should().Be(1f/1000);
+            new Numbig("1m").ConvertTo("k").Should().Be(new Numbig("1000k"));
         }
 
-        //suffix order < > =
         //to number??? probably avoidable!
-        //non negative?
+        //before, with aa, aaa, az, etc.
     }
 }
