@@ -97,6 +97,8 @@ namespace RGV.Math.Tests
         [Test]
         public void Conversion()
         {
+            //TODO: esto no tiene sentido porque por dentro se factorizan ya.
+            //TODO: lo que se quiere es poder tener el factor de conversión solamente.
             new Numbig("1m").ConvertTo("k").Should().Be(new Numbig("1000k"));
         }
 
