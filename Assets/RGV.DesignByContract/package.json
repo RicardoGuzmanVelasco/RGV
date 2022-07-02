@@ -1,0 +1,11 @@
+{
+  "name": "com.rgv.designbycontract",
+  "version": "0.2.0",
+  "displayName": "Design By Contract",
+  "description": "A bunch of precondition, postcondition, and invariant checks.",
+  "dependencies": {},
+  "author": {
+    "name": "RGV",
+    "email": "ricardoguzmanvelasco@outlook.com"
+  }
+}

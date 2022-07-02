@@ -1,0 +1,58 @@
+﻿@startuml
+'''''''''''''
+skin rose
+allowmixing
+skinparam componentstyle uml1
+'''''''''''''
+title Preconditions
+header DesignByContract
+footer v1.0
+
+component Client #white
+
+package RGV.DesignByContract{
++class "Precondition" as Guard <<static, non-generic façade>>{
+    +{static}Require<T>(T): Precondition<T>
+    
+    +GreaterThan<T>(:Precondition<T>, other:T): T
+        {T is IComparable}
+    +{method}...
+    +Contains<T>(:Precondition<T>, other:T): T
+        {T is IEnumerable}
+    +{method}...
+    +Null<T>(:Precondition<T>): T {T is class}
+    +{method}...
+    +False<T>(:Precondition<<Func<bool>>)
+    +True<T>(:Precondition<bool>)
+    +{method}...
+    ==
+    Any Extension should be decorated with:
+        -- [AssertionMethod]
+        -- [DebuggerStepThrough]
+        -- [DebuggerHidden]
+        -- ...
+}
+
++class Precondition<T>{
+    -target: T {readonly}
+    -negated: bool
+    +Not: Precondition<T> {get;}
+    -NegatePrecondition()
+    +Evaluate(:Func<T, bool>): bool
+    +{static}(:Precondition<T>): T {implicit}
+    ==
+    {can negate twice}
+    {'Not' returns other instance}
+    {Evaluate cannot receive null}
+}
+}
+'''''''''''''
+
+Guard --> Precondition
+Guard ..> Precondition::Evaluate
+Client .r.> Guard::Require : Preferred as\nextension\nmethod
+Client ..> Precondition::Not
+
+'''''''''''''
+
+@enduml
