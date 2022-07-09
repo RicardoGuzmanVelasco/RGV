@@ -77,7 +77,7 @@ namespace RGV.DesignByContract.Tests
         public void True_Throwing()
         {
             Action act = () => Require(false).True();
-            act.Should().Throw<InvalidOperationException>();
+            act.Should().Throw<Exception>();
         }
 
         [Test]
@@ -91,7 +91,7 @@ namespace RGV.DesignByContract.Tests
         public void Default_Throwing()
         {
             Action act = () => Require(default(int)).Not.Default();
-            act.Should().Throw<ArgumentException>();
+            act.Should().Throw<Exception>();
         }
 
         [Test]
