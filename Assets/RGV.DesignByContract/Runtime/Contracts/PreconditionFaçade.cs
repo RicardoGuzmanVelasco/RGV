@@ -15,7 +15,7 @@ namespace RGV.DesignByContract.Runtime
         [Pure]
         public static Contract<bool> Require(bool target)
         {
-            return new Contract<bool>(target);
+            return PreconditionFor(target);
         }
 
         [Pure]
@@ -27,7 +27,7 @@ namespace RGV.DesignByContract.Runtime
         [Pure]
         public static Contract<IEnumerable<T>> Require<T>(IEnumerable<T> target)
         {
-            return new Contract<IEnumerable<T>>(target);
+            return PreconditionFor(target);
         }
     }
 }
