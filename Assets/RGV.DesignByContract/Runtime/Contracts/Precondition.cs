@@ -26,8 +26,6 @@ namespace RGV.DesignByContract.Runtime
                 throw Throw ?? e ?? new Exception("Precondition not satisfied");
         }
 
-        public static implicit operator T(Precondition<T> @this) => @this.evaluee;
-
         #region Ctors
         public Precondition(T evaluee) : this(evaluee, null) { }
 
