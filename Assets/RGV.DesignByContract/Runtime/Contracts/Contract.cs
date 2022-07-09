@@ -27,18 +27,17 @@ namespace RGV.DesignByContract.Runtime
         [DebuggerHidden]
         public void Evaluate(Func<T, bool> predicate, Func<T, Exception> eFunc = null)
         {
-            if(predicate is null)
-                throw new ArgumentNullException(nameof(predicate), "Cannot evaluate a null predicate");
-
             if(!Contract.ContractsEnabled)
                 return;
+
+            if(predicate is null)
+                throw new ArgumentNullException(nameof(predicate), "Cannot evaluate a null predicate");
 
             if(!Satisfy(predicate))
                 throw new AggregateException
                 (
                     "Contract not satisfied",
-                    Throw,
-                    eFunc?.Invoke(evaluee)
+                    Throw, eFunc?.Invoke(evaluee)
                 );
         }
 
