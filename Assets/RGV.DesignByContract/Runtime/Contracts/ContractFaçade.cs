@@ -1,10 +1,10 @@
 namespace RGV.DesignByContract.Runtime
 {
-    public class Contract
+    public partial class Contract
     {
         public static bool ContractsEnabled { get; set; } = true;
 
-        internal static Contract<T> PreconditionFor<T>(T evaluee)
+        static Contract<T> PreconditionFor<T>(T evaluee)
         {
             return new Precondition<T>(evaluee);
         }

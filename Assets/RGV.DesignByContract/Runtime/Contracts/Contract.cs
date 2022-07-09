@@ -1,22 +1,67 @@
 using System;
+using System.Diagnostics;
 
 namespace RGV.DesignByContract.Runtime
 {
     public class Contract<T>
     {
-        public Contract(T evaluee)
+        readonly T evaluee;
+        bool negated;
+
+        #region Ctors
+        [DebuggerHidden]
+        protected internal Contract(T evaluee)
         {
-            throw new NotImplementedException();
+            this.evaluee = evaluee;
         }
-    }
+        #endregion
 
-    class Postcondition<T> : Contract<T>
-    {
-        public Postcondition(T evaluee) : base(evaluee) { }
-    }
+        [DebuggerHidden] public Contract<T> Not => CloneThisNegated();
+        [DebuggerHidden] protected virtual Exception Throw { get; init; }
 
-    class Invariant<T> : Contract<T>
-    {
-        public Invariant(T evaluee) : base(evaluee) { }
+        [DebuggerHidden]
+        public void Evaluate<TExc>(Func<T, bool> predicate)
+            where TExc : Exception, new()
+        {
+            Evaluate(predicate, _ => new TExc());
+        }
+
+        [DebuggerHidden]
+        public void Evaluate(Func<T, bool> predicate, Func<T, Exception> eFunc = null)
+        {
+            if(predicate is null)
+                throw new ArgumentNullException(nameof(predicate), "Cannot evaluate a null predicate");
+
+            if(!Contract.ContractsEnabled)
+                return;
+
+            if(!Satisfy(predicate))
+                throw new AggregateException
+                (
+                    "Contract not satisfied",
+                    Throw
+                    ?? eFunc?.Invoke(evaluee)
+                    ?? new Exception()
+                );
+        }
+
+        #region Support methods
+        /// This is to avoid aliasing with negated state. 
+        [DebuggerHidden]
+        Contract<T> CloneThisNegated()
+        {
+            return new Contract<T>(evaluee)
+            {
+                negated = !negated,
+                Throw = Throw
+            };
+        }
+
+        [DebuggerHidden]
+        internal bool Satisfy(Func<T, bool> predicate)
+        {
+            return predicate.Invoke(evaluee) ^ negated;
+        }
+        #endregion
     }
 }

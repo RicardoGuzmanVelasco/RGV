@@ -1,96 +1,96 @@
 ﻿using System;
+using System.Diagnostics;
 using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
-    public static partial class Precondition
+    public static partial class Contract
     {
-        [Pure]
-        public static Precondition<T> Require<T>(T target) where T : IComparable
-        {
-            return new Precondition<T>(target);
-        }
-
-        [Pure]
-        public static Precondition<int> Require<T>(int target)
-            where T : Exception, new()
-        {
-            return new Precondition<int>(target, new T());
-        }
-
-        public static Precondition<T> GreaterThan<T>(this Precondition<T> precondition, T other)
+        public static Contract<T> GreaterThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
-            precondition.Evaluate<ArgumentOutOfRangeException>
+            contract.Evaluate<ArgumentOutOfRangeException>
             (
                 c => c.CompareTo(other) > 0
             );
 
-            return precondition;
+            return contract;
         }
 
-        public static Precondition<T> LesserThan<T>(this Precondition<T> precondition, T other)
+        public static Contract<T> LesserThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
-            precondition.Evaluate<ArgumentOutOfRangeException>
+            contract.Evaluate<ArgumentOutOfRangeException>
             (
                 c => c.CompareTo(other) < 0
             );
 
-            return precondition;
+            return contract;
         }
 
-        public static Precondition<T> GreaterOrEqualThan<T>(this Precondition<T> precondition, T other)
+        public static Contract<T> GreaterOrEqualThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
-            precondition.Not.LesserThan(other);
+            contract.Not.LesserThan(other);
 
-            return precondition;
+            return contract;
         }
 
-        public static Precondition<T> LesserOrEqualThan<T>(this Precondition<T> precondition, T other)
+        public static Contract<T> LesserOrEqualThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
-            precondition.Not.GreaterThan(other);
+            contract.Not.GreaterThan(other);
 
-            return precondition;
+            return contract;
         }
 
-        public static Precondition<T> Between<T>(this Precondition<T> precondition, T min, T max)
+        public static Contract<T> Between<T>(this Contract<T> contract, T min, T max)
             where T : IComparable<T>, IComparable
         {
-            precondition.GreaterOrEqualThan(min);
-            precondition.LesserOrEqualThan(max);
+            contract.GreaterOrEqualThan(min);
+            contract.LesserOrEqualThan(max);
 
-            return precondition;
+            return contract;
         }
 
-        public static Precondition<int> Negative(this Precondition<int> precondition)
+        [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
+        public static void Zero(this Contract<int> contract)
         {
-            precondition.Not.GreaterOrEqualThan(0);
-
-            return precondition;
+            contract.Evaluate<ArgumentException>(i => i == 0);
         }
 
-        public static Precondition<float> Negative(this Precondition<float> precondition)
+        [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
+        public static void ApproxZero(this Contract<float> contract, float error = float.Epsilon)
         {
-            precondition.Not.GreaterOrEqualThan(0);
-
-            return precondition;
+            contract.Evaluate<ArgumentException>(f => Math.Abs(f) <= error);
         }
 
-        public static Precondition<int> Positive(this Precondition<int> precondition)
+        public static Contract<int> Negative(this Contract<int> contract)
         {
-            precondition.Not.LesserOrEqualThan(0);
+            contract.Not.GreaterOrEqualThan(0);
 
-            return precondition;
+            return contract;
         }
 
-        public static Precondition<float> Positive(this Precondition<float> precondition)
+        public static Contract<float> Negative(this Contract<float> contract)
         {
-            precondition.Not.LesserOrEqualThan(0);
+            contract.Not.GreaterOrEqualThan(0);
 
-            return precondition;
+            return contract;
+        }
+
+        public static Contract<int> Positive(this Contract<int> contract)
+        {
+            contract.Not.LesserOrEqualThan(0);
+
+            return contract;
+        }
+
+        public static Contract<float> Positive(this Contract<float> contract)
+        {
+            contract.Not.LesserOrEqualThan(0);
+
+            return contract;
         }
     }
 }

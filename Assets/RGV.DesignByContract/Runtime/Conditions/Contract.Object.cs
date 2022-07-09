@@ -1,4 +1,3 @@
-﻿using System;
 using System.Diagnostics;
 using JetBrains.Annotations;
 
@@ -7,19 +6,17 @@ namespace RGV.DesignByContract.Runtime
     public static partial class Contract
     {
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static Contract<bool> False(this Contract<bool> contract)
+        public static Contract<object> Null(this Contract<object> contract)
         {
-            contract.Not.True();
+            contract.Evaluate(o => o is null);
             return contract;
         }
 
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static Contract<bool> True(this Contract<bool> contract)
+        public static Contract<T> Default<T>(this Contract<T> contract)
+            where T : struct
         {
-            contract.Evaluate<ArgumentException>
-            (
-                b => b
-            );
+            contract.Evaluate(o => Equals(o, default(T)));
             return contract;
         }
     }

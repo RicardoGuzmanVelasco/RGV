@@ -7,25 +7,25 @@ namespace RGV.DesignByContract.Runtime
     public static partial class Precondition
     {
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static Precondition<string> NullOrEmpty(this Precondition<string> precondition)
+        public static Contract<string> NullOrEmpty(this Contract<string> contract)
         {
-            precondition.Evaluate<ArgumentException>
+            contract.Evaluate<ArgumentException>
             (
                 string.IsNullOrEmpty
             );
 
-            return precondition;
+            return contract;
         }
 
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static Precondition<string> NullOrWhiteSpace(this Precondition<string> precondition)
+        public static Contract<string> NullOrWhiteSpace(this Contract<string> contract)
         {
-            precondition.Evaluate<ArgumentException>
+            contract.Evaluate<ArgumentException>
             (
                 string.IsNullOrWhiteSpace
             );
 
-            return precondition;
+            return contract;
         }
     }
 }

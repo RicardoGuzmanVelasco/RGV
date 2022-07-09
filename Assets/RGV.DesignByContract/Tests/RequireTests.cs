@@ -2,7 +2,8 @@
 using FluentAssertions;
 using FluentAssertions.Extensions;
 using NUnit.Framework;
-using static RGV.DesignByContract.Runtime.Precondition;
+using RGV.DesignByContract.Runtime;
+using static RGV.DesignByContract.Runtime.Contract;
 
 namespace RGV.DesignByContract.Tests
 {
@@ -143,13 +144,6 @@ namespace RGV.DesignByContract.Tests
         }
 
         [Test]
-        public void LetClientSpecifyException()
-        {
-            Action act = () => Require<OverflowException>(true).False();
-            act.Should().Throw<OverflowException>();
-        }
-
-        [Test]
         public void Between_Throwing()
         {
             Action act = () => Require(1).Between(2, 3);
@@ -180,21 +174,21 @@ namespace RGV.DesignByContract.Tests
         [Test]
         public void AproxZero_NotThrowing()
         {
-            Action act = () => Require(0f).AproxZero();
+            Action act = () => Require(0f).ApproxZero();
             act.Should().NotThrow();
         }
 
         [Test]
         public void AproxZero_Throwing()
         {
-            Action act = () => Require(0.000001f).Not.AproxZero(0.000001f);
+            Action act = () => Require(0.000001f).Not.ApproxZero(0.000001f);
             act.Should().Throw<ArgumentException>();
         }
 
         [Test]
         public void AproxZero_DefaultError_IsEpsilon()
         {
-            Action act = () => Require(float.Epsilon).Not.AproxZero();
+            Action act = () => Require(float.Epsilon).Not.ApproxZero();
             act.Should().Throw<ArgumentException>();
         }
 

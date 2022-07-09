@@ -5,30 +5,23 @@ using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
-    public static partial class Precondition
+    public static partial class Contract
     {
-        public static Precondition<IEnumerable<T>> Contains<T>(this Precondition<IEnumerable<T>> precondition,
+        [Pure]
+        public static Contract<IEnumerable<T>> Require<T>(IEnumerable<T> target)
+        {
+            return new Contract<IEnumerable<T>>(target);
+        }
+
+        public static Contract<IEnumerable<T>> Contains<T>(this Contract<IEnumerable<T>> contract,
             params T[] others)
         {
-            precondition.Evaluate<ArgumentException>
+            contract.Evaluate<ArgumentException>
             (
                 c => others.All(c.Contains)
             );
 
-            return precondition;
-        }
-
-        [Pure]
-        public static Precondition<IEnumerable<T>> Require<T>(IEnumerable<T> target)
-        {
-            return new Precondition<IEnumerable<T>>(target);
-        }
-
-        [Pure]
-        public static Precondition<IEnumerable<T>> Require<T, TExc>(IEnumerable<T> target)
-            where TExc : Exception, new()
-        {
-            return new Precondition<IEnumerable<T>>(target, new TExc());
+            return contract;
         }
     }
 }
