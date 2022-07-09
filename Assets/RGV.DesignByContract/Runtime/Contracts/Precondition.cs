@@ -2,9 +2,9 @@
 
 namespace RGV.DesignByContract.Runtime
 {
-    public class Precondition<T>
+    public class Precondition<T> : Contract<T>
     {
-        readonly T target;
+        readonly T evaluee;
         bool negated;
 
         Exception Throw { get; }
@@ -26,14 +26,15 @@ namespace RGV.DesignByContract.Runtime
                 throw Throw ?? e ?? new Exception("Precondition not satisfied");
         }
 
-        public static implicit operator T(Precondition<T> @this) => @this.target;
+        public static implicit operator T(Precondition<T> @this) => @this.evaluee;
 
         #region Ctors
-        public Precondition(T target) : this(target, null) { }
+        public Precondition(T evaluee) : this(evaluee, null) { }
 
-        public Precondition(T target, Exception exception)
+        public Precondition(T evaluee, Exception exception)
+            : base(evaluee)
         {
-            this.target = target;
+            this.evaluee = evaluee;
             Throw = exception;
         }
         #endregion
@@ -44,7 +45,7 @@ namespace RGV.DesignByContract.Runtime
         /// </remarks>
         Precondition<T> CloneThisPreconditionNegated()
         {
-            return new Precondition<T>(target, Throw)
+            return new Precondition<T>(evaluee, Throw)
             {
                 negated = !negated
             };
@@ -52,7 +53,7 @@ namespace RGV.DesignByContract.Runtime
 
         internal bool Satisfy(Func<T, bool> predicate)
         {
-            return predicate.Invoke(target) ^ negated;
+            return predicate.Invoke(evaluee) ^ negated;
         }
         #endregion
     }
