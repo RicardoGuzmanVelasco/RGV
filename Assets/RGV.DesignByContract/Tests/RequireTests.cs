@@ -2,7 +2,6 @@
 using FluentAssertions;
 using FluentAssertions.Extensions;
 using NUnit.Framework;
-using RGV.DesignByContract.Runtime;
 using static RGV.DesignByContract.Runtime.Contract;
 
 namespace RGV.DesignByContract.Tests
@@ -20,7 +19,7 @@ namespace RGV.DesignByContract.Tests
         public void GreaterThan_Throwing()
         {
             Action actThrowing = () => Require(1).GreaterThan(1);
-            actThrowing.Should().Throw<ArgumentOutOfRangeException>();
+            actThrowing.Should().Throw<ArgumentException>();
         }
 
         [Test]
@@ -34,7 +33,7 @@ namespace RGV.DesignByContract.Tests
         public void LesserThan_Throwing()
         {
             Action actThrowing = () => Require(1).LesserThan(1);
-            actThrowing.Should().Throw<ArgumentOutOfRangeException>();
+            actThrowing.Should().Throw<ArgumentException>();
         }
 
         [Test]
@@ -48,18 +47,17 @@ namespace RGV.DesignByContract.Tests
         public void Not_Throwing()
         {
             Action actThrowing = () => Require(1).Not.GreaterThan(0);
-            actThrowing.Should().Throw<ArgumentOutOfRangeException>();
+            actThrowing.Should().Throw<ArgumentException>();
         }
 
         [Test]
         public void NotNull_Throwing()
         {
             Action act = () => Require(null).Not.Null();
-            act.Should().Throw<ArgumentNullException>();
+            act.Should().Throw<ArgumentException>();
         }
 
-        [Test]
-        [Obsolete("In the past it cannot")]
+        [Test, Obsolete("In the past it cannot")]
         public void Can_Negate_Twice()
         {
             Action act = () => Require(1).Not.Not.GreaterThan(0);
@@ -147,7 +145,7 @@ namespace RGV.DesignByContract.Tests
         public void Between_Throwing()
         {
             Action act = () => Require(1).Between(2, 3);
-            act.Should().Throw<ArgumentOutOfRangeException>();
+            act.Should().Throw<ArgumentException>();
         }
 
         [Test]

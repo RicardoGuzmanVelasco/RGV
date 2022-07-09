@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
@@ -10,10 +9,7 @@ namespace RGV.DesignByContract.Runtime
         public static void Default<T>(this Precondition<T> precondition)
             where T : struct
         {
-            precondition.Evaluate<ArgumentException>
-            (
-                target => Equals(target, default(T))
-            );
+            precondition.Evaluate(target => Equals(target, default(T)));
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace RGV.DesignByContract.Runtime
@@ -9,10 +8,7 @@ namespace RGV.DesignByContract.Runtime
         public static void Contains<T>(this Contract<IEnumerable<T>> contract,
             params T[] others)
         {
-            contract.Evaluate<ArgumentException>
-            (
-                c => others.All(c.Contains)
-            );
+            contract.Evaluate(c => others.All(c.Contains));
         }
     }
 }

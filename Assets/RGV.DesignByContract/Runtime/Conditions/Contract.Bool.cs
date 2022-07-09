@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
@@ -15,10 +14,7 @@ namespace RGV.DesignByContract.Runtime
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
         public static void True(this Contract<bool> contract)
         {
-            contract.Evaluate<ArgumentException>
-            (
-                b => b
-            );
+            contract.Evaluate(b => b);
         }
     }
 }

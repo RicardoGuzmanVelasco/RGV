@@ -10,19 +10,13 @@ namespace RGV.DesignByContract.Runtime
         public static void GreaterThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
-            contract.Evaluate<ArgumentOutOfRangeException>
-            (
-                c => c.CompareTo(other) > 0
-            );
+            contract.Evaluate(c => c.CompareTo(other) > 0);
         }
 
         public static void LesserThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
-            contract.Evaluate<ArgumentOutOfRangeException>
-            (
-                c => c.CompareTo(other) < 0
-            );
+            contract.Evaluate(c => c.CompareTo(other) < 0);
         }
 
         public static void GreaterOrEqualThan<T>(this Contract<T> contract, T other)
@@ -47,13 +41,13 @@ namespace RGV.DesignByContract.Runtime
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
         public static void Zero(this Contract<int> contract)
         {
-            contract.Evaluate<ArgumentException>(i => i == 0);
+            contract.Evaluate(i => i == 0);
         }
 
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
         public static void ApproxZero(this Contract<float> contract, float error = float.Epsilon)
         {
-            contract.Evaluate<ArgumentException>(f => Abs(f) <= error);
+            contract.Evaluate(f => Abs(f) <= error);
         }
 
         public static void Negative(this Contract<int> contract)

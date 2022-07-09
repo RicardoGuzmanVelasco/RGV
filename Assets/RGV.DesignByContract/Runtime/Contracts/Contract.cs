@@ -18,13 +18,6 @@ namespace RGV.DesignByContract.Runtime
         [DebuggerHidden] protected virtual Exception Throw { get; init; }
 
         [DebuggerHidden]
-        public void Evaluate<TExc>(Func<T, bool> predicate)
-            where TExc : Exception, new()
-        {
-            Evaluate(predicate, _ => new TExc());
-        }
-
-        [DebuggerHidden]
         public void Evaluate(Func<T, bool> predicate, Func<T, Exception> eFunc = null)
         {
             if(!Contract.ContractsEnabled)
