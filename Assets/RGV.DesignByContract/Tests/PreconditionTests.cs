@@ -22,6 +22,16 @@ namespace RGV.DesignByContract.Tests
         }
 
         [Test]
+        public void Precondition_ThrowsFirst_ItsSavedException()
+        {
+            var sut = new Precondition<object>(null, new ExactlyThisException());
+
+            Action act = () => sut.Evaluate<Exception>(_ => false);
+
+            act.Should().Throw<ExactlyThisException>();
+        }
+
+        [Test]
         public void Not_TruthTable()
         {
             var sut = new Precondition<bool>(true);

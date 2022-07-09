@@ -8,13 +8,11 @@ namespace RGV.DesignByContract.Runtime
         readonly T evaluee;
         bool negated;
 
-        #region Ctors
         [DebuggerHidden]
         protected internal Contract(T evaluee)
         {
             this.evaluee = evaluee;
         }
-        #endregion
 
         [DebuggerHidden] public Contract<T> Not => CloneThisNegated();
         [DebuggerHidden] protected virtual Exception Throw { get; init; }
@@ -39,9 +37,8 @@ namespace RGV.DesignByContract.Runtime
                 throw new AggregateException
                 (
                     "Contract not satisfied",
-                    Throw
-                    ?? eFunc?.Invoke(evaluee)
-                    ?? new Exception()
+                    Throw,
+                    eFunc?.Invoke(evaluee)
                 );
         }
 
