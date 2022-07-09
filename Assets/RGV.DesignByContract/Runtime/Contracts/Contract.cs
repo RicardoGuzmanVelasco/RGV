@@ -9,7 +9,7 @@ namespace RGV.DesignByContract.Runtime
         bool negated;
 
         [DebuggerHidden]
-        protected internal Contract(T evaluee)
+        protected Contract(T evaluee)
         {
             this.evaluee = evaluee;
         }

@@ -5,7 +5,10 @@ using RGV.DesignByContract.Runtime;
 
 namespace RGV.DesignByContract.Tests
 {
-    public class PreconditionTests
+    /// <summary>
+    /// Uses a precondition as an example of a contract.
+    /// </summary>
+    public class ContractNegationTests
     {
         [Test]
         public void Negated_AndTwiceNegated_Differ()
