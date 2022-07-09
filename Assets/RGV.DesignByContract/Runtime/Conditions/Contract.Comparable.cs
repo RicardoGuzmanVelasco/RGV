@@ -1,56 +1,47 @@
 ﻿using System;
 using System.Diagnostics;
 using JetBrains.Annotations;
+using static System.Math;
 
 namespace RGV.DesignByContract.Runtime
 {
     public static partial class Contract
     {
-        public static Contract<T> GreaterThan<T>(this Contract<T> contract, T other)
+        public static void GreaterThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
             contract.Evaluate<ArgumentOutOfRangeException>
             (
                 c => c.CompareTo(other) > 0
             );
-
-            return contract;
         }
 
-        public static Contract<T> LesserThan<T>(this Contract<T> contract, T other)
+        public static void LesserThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
             contract.Evaluate<ArgumentOutOfRangeException>
             (
                 c => c.CompareTo(other) < 0
             );
-
-            return contract;
         }
 
-        public static Contract<T> GreaterOrEqualThan<T>(this Contract<T> contract, T other)
+        public static void GreaterOrEqualThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
             contract.Not.LesserThan(other);
-
-            return contract;
         }
 
-        public static Contract<T> LesserOrEqualThan<T>(this Contract<T> contract, T other)
+        public static void LesserOrEqualThan<T>(this Contract<T> contract, T other)
             where T : IComparable<T>, IComparable
         {
             contract.Not.GreaterThan(other);
-
-            return contract;
         }
 
-        public static Contract<T> Between<T>(this Contract<T> contract, T min, T max)
+        public static void Between<T>(this Contract<T> contract, T min, T max)
             where T : IComparable<T>, IComparable
         {
             contract.GreaterOrEqualThan(min);
             contract.LesserOrEqualThan(max);
-
-            return contract;
         }
 
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
@@ -62,35 +53,27 @@ namespace RGV.DesignByContract.Runtime
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
         public static void ApproxZero(this Contract<float> contract, float error = float.Epsilon)
         {
-            contract.Evaluate<ArgumentException>(f => Math.Abs(f) <= error);
+            contract.Evaluate<ArgumentException>(f => Abs(f) <= error);
         }
 
-        public static Contract<int> Negative(this Contract<int> contract)
+        public static void Negative(this Contract<int> contract)
         {
             contract.Not.GreaterOrEqualThan(0);
-
-            return contract;
         }
 
-        public static Contract<float> Negative(this Contract<float> contract)
+        public static void Negative(this Contract<float> contract)
         {
             contract.Not.GreaterOrEqualThan(0);
-
-            return contract;
         }
 
-        public static Contract<int> Positive(this Contract<int> contract)
+        public static void Positive(this Contract<int> contract)
         {
             contract.Not.LesserOrEqualThan(0);
-
-            return contract;
         }
 
-        public static Contract<float> Positive(this Contract<float> contract)
+        public static void Positive(this Contract<float> contract)
         {
             contract.Not.LesserOrEqualThan(0);
-
-            return contract;
         }
     }
 }
