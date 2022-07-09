@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
@@ -47,7 +48,7 @@ namespace RGV.DesignByContract.Runtime
         }
 
         [DebuggerHidden]
-        internal bool Satisfy(Func<T, bool> predicate)
+        internal bool Satisfy([NotNull] Func<T, bool> predicate)
         {
             return predicate.Invoke(evaluee) ^ negated;
         }

@@ -11,47 +11,61 @@ footer v1.0
 component Client #white
 
 package RGV.DesignByContract{
-+class "Precondition" as Guard <<static, non-generic façade>>{
-    +{static}Require<T>(T): Precondition<T>
++class "Contract" as ContractFaçade <<static, non-generic façade>>{
+    +{static}Require<T>(T): Contract<T>
+    +{static}Ensure<T>(T): Contract<T>
+    +{static}Invariant<T>(T): Contract<T>
     
-    +GreaterThan<T>(:Precondition<T>, other:T): T
-        {T is IComparable}
+    +GreaterThan<T>(:Contract<T>, other:T)
     +{method}...
-    +Contains<T>(:Precondition<T>, other:T): T
-        {T is IEnumerable}
+    +Contains<T>(:Contract<T>, other:T)
     +{method}...
-    +Null<T>(:Precondition<T>): T {T is class}
+    +Null<T>(:Contract<T>)
     +{method}...
-    +False<T>(:Precondition<<Func<bool>>)
-    +True<T>(:Precondition<bool>)
+    +False<T>(:Contract<<Func<bool>>)
+    +True<T>(:Contract<bool>)
     +{method}...
-    ==
-    Any Extension should be decorated with:
-        -- [AssertionMethod]
-        -- [DebuggerStepThrough]
-        -- [DebuggerHidden]
-        -- ...
 }
 
 +class Precondition<T>{
+}
++class Postcondition<T>{
+}
++class Invariant<T>{
+}
+
+
++class Contract<T>{
     -target: T {readonly}
     -negated: bool
-    +Not: Precondition<T> {get;}
-    -NegatePrecondition()
+    +Not: Contract<T> {get;}
+    --
     +Evaluate(:Func<T, bool>): bool
-    +{static}(:Precondition<T>): T {implicit}
     ==
-    {can negate twice}
     {'Not' returns other instance}
     {Evaluate cannot receive null}
 }
 }
 '''''''''''''
 
-Guard --> Precondition
-Guard ..> Precondition::Evaluate
-Client .r.> Guard::Require : Preferred as\nextension\nmethod
-Client ..> Precondition::Not
+ContractFaçade --> Contract
+ContractFaçade ..> Contract::Evaluate
+Client .r.> ContractFaçade
+Client ..> Contract::Not
+
+Precondition -u-|> Contract
+Postcondition -u-|> Contract
+Invariant -u-|> Contract
+
+package System{
+ class ArgumentException <<(E, lightblue)>>
+ class InvalidOperationException <<(E, lightblue)>>
+ class ApplicationException <<(E, lightblue)>>
+}
+
+Precondition ..> ArgumentException
+Postcondition ..> ApplicationException
+Invariant ..> InvalidOperationException
 
 '''''''''''''
 
