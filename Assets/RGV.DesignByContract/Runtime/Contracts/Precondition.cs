@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace RGV.DesignByContract.Runtime
 {
@@ -7,5 +8,16 @@ namespace RGV.DesignByContract.Runtime
         internal Precondition(T evaluee) : base(evaluee) { }
 
         protected override Exception Throw { get; init; } = new ArgumentException("Precondition failed");
+
+
+        [DebuggerHidden]
+        protected override Contract<T> CloneThisNegated()
+        {
+            return new Precondition<T>(evaluee)
+            {
+                negated = !negated,
+                Throw = Throw
+            };
+        }
     }
 }

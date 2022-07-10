@@ -4,10 +4,10 @@ using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
-    public class Contract<T>
+    public abstract class Contract<T>
     {
-        readonly T evaluee;
-        bool negated;
+        protected readonly T evaluee;
+        protected bool negated;
 
         [DebuggerHidden]
         protected Contract(T evaluee)
@@ -38,14 +38,7 @@ namespace RGV.DesignByContract.Runtime
         #region Support methods
         /// This is to avoid aliasing with negated state. 
         [DebuggerHidden]
-        Contract<T> CloneThisNegated()
-        {
-            return new Contract<T>(evaluee)
-            {
-                negated = !negated,
-                Throw = Throw
-            };
-        }
+        protected abstract Contract<T> CloneThisNegated();
 
         [DebuggerHidden]
         internal bool Satisfy([NotNull] Func<T, bool> predicate)
