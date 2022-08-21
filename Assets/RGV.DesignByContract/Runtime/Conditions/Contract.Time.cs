@@ -4,18 +4,16 @@ using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
-    public static partial class Precondition
+    public static partial class Contract
     {
         [AssertionMethod, DebuggerStepThrough, DebuggerHidden]
-        public static Precondition<DateTime> AtMidnight(this Precondition<DateTime> precondition)
+        public static void AtMidnight(this Contract<DateTime> contract)
         {
-            precondition.Evaluate
+            contract.Evaluate
             (
                 d => d.TimeOfDay == TimeSpan.Zero,
-                new ArgumentException("Should be at midnight")
+                d => new ArgumentException($"Should be at midnight but got {d.TimeOfDay}")
             );
-
-            return precondition;
         }
     }
 }

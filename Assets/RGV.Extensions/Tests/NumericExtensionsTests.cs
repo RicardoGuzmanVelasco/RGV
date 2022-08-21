@@ -1,5 +1,6 @@
 using System;
 using FluentAssertions;
+using JetBrains.Annotations;
 using NUnit.Framework;
 using RGV.Extensions.Runtime;
 
@@ -7,7 +8,7 @@ namespace RGV.Extensions.Tests
 {
     public class NumericExtensionsTests
     {
-        [DatapointSource]
+        [DatapointSource, UsedImplicitly]
         int[] EqClassesInts => new[]
         {
             int.MinValue,

@@ -17,22 +17,20 @@ namespace RGV.Extensions.Runtime
                 combos.Add(combo);
                 source = source[combo.Length..];
             }
-            
+
             return combos.Max(s => s.Length);
 
             string NextCombo(string s)
             {
                 var combo = s.First().ToString();
                 for(var i = 1; i < s.Length; i++)
-                {
                     if(s[i] == combo.Last())
                         combo += s[i];
                     else
                         break;
-                }
 
                 return combo;
             }
-        } 
+        }
     }
 }
