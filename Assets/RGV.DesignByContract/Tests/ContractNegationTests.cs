@@ -5,7 +5,10 @@ using RGV.DesignByContract.Runtime;
 
 namespace RGV.DesignByContract.Tests
 {
-    public class PreconditionTests
+    /// <summary>
+    /// Uses a precondition as an example of a contract.
+    /// </summary>
+    public class ContractNegationTests
     {
         [Test]
         public void Negated_AndTwiceNegated_Differ()
@@ -19,16 +22,6 @@ namespace RGV.DesignByContract.Tests
             (
                 !sut.Not.Satisfy(b => b)
             );
-        }
-
-        [Test]
-        public void Precondition_ThrowsFirst_ItsSavedException()
-        {
-            var sut = new Precondition<object>(null, new ExactlyThisException());
-
-            Action act = () => sut.Evaluate<Exception>(_ => false);
-
-            act.Should().ThrowExactly<ExactlyThisException>();
         }
 
         [Test]

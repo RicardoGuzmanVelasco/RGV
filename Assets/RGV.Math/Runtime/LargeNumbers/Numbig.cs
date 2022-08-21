@@ -1,5 +1,5 @@
 using System;
-using static RGV.DesignByContract.Runtime.Precondition;
+using static RGV.DesignByContract.Runtime.Contract;
 
 namespace RGV.Math.Runtime.LargeNumbers
 {
