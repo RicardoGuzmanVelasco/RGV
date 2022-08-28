@@ -1,9 +1,11 @@
 using System;
 using System.Diagnostics;
+using System.Linq;
 using JetBrains.Annotations;
 
 namespace RGV.DesignByContract.Runtime
 {
+    [DebuggerStepThrough]
     public abstract class Contract<T>
     {
         protected readonly T evaluee;
@@ -18,12 +20,9 @@ namespace RGV.DesignByContract.Runtime
         [DebuggerHidden] public Contract<T> Not => CloneThisNegated();
         [DebuggerHidden] protected virtual Exception Throw { get; init; }
 
-        [DebuggerHidden]
+        [DebuggerHidden, Conditional("UNITY_ASSERTIONS")]
         public void Evaluate(Func<T, bool> predicate, Func<T, Exception> eFunc = null)
         {
-            if(!Contract.ContractsEnabled)
-                return;
-
             if(predicate is null)
                 throw new ArgumentNullException(nameof(predicate), "Cannot evaluate a null predicate");
 
@@ -31,7 +30,7 @@ namespace RGV.DesignByContract.Runtime
                 throw new AggregateException
                 (
                     "Contract not satisfied",
-                    Throw, eFunc?.Invoke(evaluee)
+                    new[] { Throw, eFunc?.Invoke(evaluee) }.Where(e => e is not null)
                 );
         }
 
