@@ -7,16 +7,17 @@ namespace RGV.DesignByContract.Runtime
     {
         internal Precondition(T evaluee) : base(evaluee) { }
 
-        protected override Exception Throw { get; init; } = new ArgumentException("Precondition failed");
-
+        protected override Exception ReportContractFailure(string msg)
+        {
+            return new ArgumentException(msg);
+        }
 
         [DebuggerHidden]
         protected override Contract<T> CloneThisNegated()
         {
             return new Precondition<T>(evaluee)
             {
-                negated = !negated,
-                Throw = Throw
+                negated = !negated
             };
         }
     }

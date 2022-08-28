@@ -7,15 +7,17 @@ namespace RGV.DesignByContract.Runtime
     {
         public Postcondition(T evaluee) : base(evaluee) { }
 
-        protected override Exception Throw { get; init; } = new ApplicationException("Postcondition failed");
+        protected override Exception ReportContractFailure(string msg)
+        {
+            return new ApplicationException(msg);
+        }
 
         [DebuggerHidden]
         protected override Contract<T> CloneThisNegated()
         {
             return new Postcondition<T>(evaluee)
             {
-                negated = !negated,
-                Throw = Throw
+                negated = !negated
             };
         }
     }

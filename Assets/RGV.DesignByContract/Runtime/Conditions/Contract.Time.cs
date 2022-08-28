@@ -12,7 +12,7 @@ namespace RGV.DesignByContract.Runtime
             contract.Evaluate
             (
                 d => d.TimeOfDay == TimeSpan.Zero,
-                d => new ArgumentException($"Should be at midnight but got {d.TimeOfDay}")
+                "Should be at midnight"
             );
         }
     }

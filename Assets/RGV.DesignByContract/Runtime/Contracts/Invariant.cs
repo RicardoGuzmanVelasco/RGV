@@ -7,15 +7,17 @@ namespace RGV.DesignByContract.Runtime
     {
         public Invariant(T evaluee) : base(evaluee) { }
 
-        protected override Exception Throw { get; init; } = new InvalidOperationException("Invariant failed");
+        protected override Exception ReportContractFailure(string msg)
+        {
+            return new InvalidOperationException(msg);
+        }
 
         [DebuggerHidden]
         protected override Contract<T> CloneThisNegated()
         {
             return new Invariant<T>(evaluee)
             {
-                negated = !negated,
-                Throw = Throw
+                negated = !negated
             };
         }
     }
