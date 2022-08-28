@@ -34,11 +34,11 @@ namespace RGV.DesignByContract.Runtime
         string FormatMsg(string msg)
         {
             var prettyPrint = GetType().Name.Remove(GetType().Name.Length - 2);
-            var header = $"{prettyPrint} failed";
+            var header = $"{prettyPrint} failed.";
 
             var reason = msg is null
                 ? string.Empty
-                : $" ({msg} but found {evaluee})";
+                : $" {msg} (found {evaluee}).";
 
             return header + reason;
         }
