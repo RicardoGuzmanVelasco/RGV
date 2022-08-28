@@ -1,6 +1,6 @@
 {
   "name": "com.rgv.designbycontract",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Design By Contract",
   "description": "A bunch of precondition, postcondition, and invariant checks.",
   "dependencies": {},
