@@ -36,7 +36,7 @@ namespace RGV.Math.Tests
         }
 
         [Test]
-        public void DateRanges()
+        public void DateRanges_Ctor()
         {
             using var _ = new AssertionScope();
 
@@ -55,24 +55,11 @@ namespace RGV.Math.Tests
             new DateRange(1.January(2020), 31.December(2020))
                 .Includes(31.December(2020).AddDays(1))
                 .Should().BeFalse("because is after the end");
+        }
 
-            DateRange.Since(1.January(2020))
-                .Includes(1.January(2020))
-                .Should().BeTrue("because is the right open-ended range");
-
-            DateRange.Since(1.January(2020))
-                .Includes(DateTime.MaxValue)
-                .Should().BeTrue("because is the future of right open-ended range");
-
-            DateRange.Until(31.December(2020))
-                .Includes(31.December(2020))
-                .Should().BeTrue("because is the left open-ended range");
-
-            DateRange.Until(31.December(2020))
-                .Includes(DateTime.MinValue)
-                .Should().BeTrue("because is the past of left open-ended range");
-
-
+        [Test]
+        public void DateRanges_FactoryProperties()
+        {
             DateRange.AllTime
                 .Includes(DateTime.MinValue)
                 .Should().BeTrue("because is the past of all-time range");
@@ -92,6 +79,28 @@ namespace RGV.Math.Tests
             DateRange.Empty
                 .Includes(new DateTime())
                 .Should().BeFalse("because empty range contains nothing, nor default value");
+        }
+
+        [Test]
+        public void DateRanges_OpenEnded()
+        {
+            using var _ = new AssertionScope();
+
+            DateRange.Since(1.January(2020))
+                .Includes(1.January(2020))
+                .Should().BeTrue("because is the right open-ended range");
+
+            DateRange.Since(1.January(2020))
+                .Includes(DateTime.MaxValue)
+                .Should().BeTrue("because is the future of right open-ended range");
+
+            DateRange.Until(31.December(2020))
+                .Includes(31.December(2020))
+                .Should().BeTrue("because is the left open-ended range");
+
+            DateRange.Until(31.December(2020))
+                .Includes(DateTime.MinValue)
+                .Should().BeTrue("because is the past of left open-ended range");
         }
     }
 }
