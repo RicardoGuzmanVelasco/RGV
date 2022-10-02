@@ -62,7 +62,7 @@ namespace RGV.Math.Tests
 
             DateRange.Since(1.January(2020))
                 .Includes(DateTime.MaxValue)
-                .Should().BeTrue("because is the max future of right open-ended range");
+                .Should().BeTrue("because is the future of right open-ended range");
 
             DateRange.Until(31.December(2020))
                 .Includes(31.December(2020))
@@ -70,7 +70,28 @@ namespace RGV.Math.Tests
 
             DateRange.Until(31.December(2020))
                 .Includes(DateTime.MinValue)
-                .Should().BeTrue("because is the max past of left open-ended range");
+                .Should().BeTrue("because is the past of left open-ended range");
+
+
+            DateRange.AllTime
+                .Includes(DateTime.MinValue)
+                .Should().BeTrue("because is the past of all-time range");
+
+            DateRange.AllTime
+                .Includes(DateTime.MaxValue)
+                .Should().BeTrue("because is the future of all-time range");
+
+            DateRange.Empty
+                .Includes(DateTime.MinValue)
+                .Should().BeFalse("because empty range contains nothing, nor past");
+
+            DateRange.Empty
+                .Includes(DateTime.MaxValue)
+                .Should().BeFalse("because empty range contains nothing, nor future");
+
+            DateRange.Empty
+                .Includes(new DateTime())
+                .Should().BeFalse("because empty range contains nothing, nor default value");
         }
     }
 }
