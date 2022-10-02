@@ -1,7 +1,7 @@
 using System;
 using RGV.DesignByContract.Runtime;
 
-namespace RGV.Math.Runtime.Dates.RecurringEvents
+namespace RGV.Math.Runtime.Dates.TemporalExpressions
 {
     /// <example>Last (-1) tuesday of the month, second (2) friday of the month.</example>>
     public class RelativeDayEveryMonth : TemporalExpression
@@ -17,12 +17,12 @@ namespace RGV.Math.Runtime.Dates.RecurringEvents
             this.relativePositionInMonth = relativePositionInMonth;
         }
 
-        public override bool Includes(DateTime when)
+        public virtual bool Includes(DateTime when)
         {
-            return DayMatches() && WeekMatches(when);
-
-            bool DayMatches() => when.DayOfWeek == dayOfWeek;
+            return DayMatches(when) && WeekMatches(when);
         }
+
+        bool DayMatches(DateTime when) => when.DayOfWeek == dayOfWeek;
 
         bool WeekMatches(DateTime when)
         {
