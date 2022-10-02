@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RGV.Math.Runtime.Dates.TemporalExpressions;
 
 namespace RGV.Math.Runtime.Dates.RecurringEvents
 {
@@ -8,7 +9,6 @@ namespace RGV.Math.Runtime.Dates.RecurringEvents
         public abstract bool IsOccuring(RecurringEvent what, DateTime when);
         public abstract DateTime NextOcurrence(RecurringEvent what, DateTime when);
 
-        //to daterange.
-        public abstract IEnumerable<DateTime> Ocurrences(RecurringEvent what, DateTime from, DateTime to);
+        public abstract IEnumerable<DateTime> Ocurrences(RecurringEvent what, DateRange when);
     }
 }
