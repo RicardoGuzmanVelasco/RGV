@@ -8,7 +8,7 @@
   "includePlatforms": [
     "Editor"
   ],
-  "name": "RGV.Testing.Editor.Tests",
+  "name": "RGV.TestApi.Editor.Tests",
   "noEngineReferences": false,
   "overrideReferences": true,
   "precompiledReferences": [
@@ -16,7 +16,7 @@
     "NSubstitute.dll"
   ],
   "references": [
-    "RGV.Testing",
+    "RGV.TestApi",
     "UnityEngine.TestRunner",
     "UnityEditor.TestRunner",
     "BoundfoxStudios.FluentAssertions"

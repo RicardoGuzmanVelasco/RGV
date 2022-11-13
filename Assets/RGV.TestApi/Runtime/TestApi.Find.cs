@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace RGV.Testing.Runtime
+namespace RGV.TestApi.Runtime
 {
     public partial class TestApi
     {

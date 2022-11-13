@@ -5,7 +5,7 @@ using System.Linq;
 using JetBrains.Annotations;
 using static RGV.DesignByContract.Runtime.Contract;
 
-namespace RGV.Testing.Runtime
+namespace RGV.TestApi.Runtime
 {
     public static partial class TestApi
     {

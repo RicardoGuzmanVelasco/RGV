@@ -1,5 +1,5 @@
 ﻿{
-  "name": "com.rgv.testing",
+  "name": "com.rgv.TestApi",
   "version": "0.1.1",
   "displayName": "RGV Test API",
   "description": "Una test API con facilidades para repeticiones y para runtime de Unity."

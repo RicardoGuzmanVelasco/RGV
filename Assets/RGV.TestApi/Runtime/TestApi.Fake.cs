@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RGV.Testing.Runtime
+namespace RGV.TestApi.Runtime
 {
     public partial class TestApi
     {

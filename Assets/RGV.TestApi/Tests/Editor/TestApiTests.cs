@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
 using NUnit.Framework;
-using static RGV.Testing.Runtime.TestApi;
+using static RGV.TestApi.Runtime.TestApi;
 
-namespace RGV.Testing.Tests
+namespace RGV.TestApi.Tests
 {
     public class TestApiTests
     {
