@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using RGV.Extensions.Runtime;
+using Assets.RGV.Extensions.Runtime.Domain;
 
 namespace RGV.Math.Runtime.Roman
 {
@@ -17,9 +17,7 @@ namespace RGV.Math.Runtime.Roman
         #endregion
 
         #region Constructors
-        public RomanNumeral() : this("I")
-        {
-        }
+        public RomanNumeral() : this("I") { }
 
         public RomanNumeral(string symbols)
         {

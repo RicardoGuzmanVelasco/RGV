@@ -1,0 +1,37 @@
+﻿@startuml
+skin rose
+header Package layout
+title Use cases
+
+:Unity developer: as Dev
+(Create\npackage\nlayout) as CreateLayout
+
+:Programmer: as Programmer
+(Add new layout) as AddLayout
+
+package Examples{
+(Create\nUnity\nlayout) as CreateUnityLayout
+(Create\nminimum\nlayout) as CreateMinLayout
+(Create\n2-layered\nlayout) as Create2Layout
+(Create\nx\nlayout) as CreateXLayout #transparent
+}  
+
+Programmer -u-|> Dev
+
+Dev - CreateLayout
+Programmer - AddLayout
+
+Create2Layout -u-|> CreateLayout
+CreateUnityLayout -u-|> CreateLayout
+CreateMinLayout -u-|> CreateLayout
+CreateXLayout .u.|> CreateLayout
+
+note as N1
+Any new layout added
+becomes a new available
+"sub-use case"
+end note
+N1 .. CreateXLayout : >
+N1 .. AddLayout : <
+
+@enduml

@@ -1,0 +1,22 @@
+{
+  "name": "RGV.PackageLayering.Editor",
+  "rootNamespace": "",
+  "references": [
+    "RGV.PackageLayering",
+    "RGV.Extensions.Editor",
+    "RGV.Extensions.Infrastructure"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

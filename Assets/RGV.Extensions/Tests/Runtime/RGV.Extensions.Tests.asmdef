@@ -1,0 +1,28 @@
+{
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "excludePlatforms": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "name": "RGV.Extensions.Tests",
+  "noEngineReferences": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll",
+    "NSubstitute.dll"
+  ],
+  "references": [
+    "RGV.Extensions",
+    "UnityEngine.TestRunner",
+    "UnityEditor.TestRunner",
+    "BoundfoxStudios.FluentAssertions",
+    "RGV.Extensions.Infrastructure",
+    "RGV.Extensions.Domain"
+  ],
+  "rootNamespace": "",
+  "versionDefines": []
+}

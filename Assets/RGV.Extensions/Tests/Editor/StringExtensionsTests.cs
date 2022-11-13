@@ -1,8 +1,8 @@
+using Assets.RGV.Extensions.Runtime.Domain;
 using FluentAssertions;
 using NUnit.Framework;
-using RGV.Extensions.Runtime;
 
-namespace RGV.Extensions.Tests
+namespace RGV.Extensions.Tests.Editor
 {
     public class StringExtensionsTests
     {

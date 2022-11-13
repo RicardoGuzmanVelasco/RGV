@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class EditorFolderExtensions <<static>> #technology{
+   +{static}CleanFolder()
+   +{static}Recompile()
+   +{static}FindCurrentFolder()
+} 
+
+class FolderPath <<(T, orange)>>{
+    +{static}Concat(:FolderPath)
+}
+
+@enduml

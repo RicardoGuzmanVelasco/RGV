@@ -1,0 +1,16 @@
+{
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "excludePlatforms": [],
+  "includePlatforms": [],
+  "name": "RGV.Testing",
+  "noEngineReferences": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "references": [
+    "RGV.DesignByContract.Runtime"
+  ],
+  "rootNamespace": "",
+  "versionDefines": []
+}

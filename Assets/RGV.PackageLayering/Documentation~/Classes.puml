@@ -1,0 +1,94 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+skin rose
+allowmixing
+skinparam componentstyle uml1
+header Package layout
+
+class PackageLayoutMenuItems <<static>> #technology{
+    +{static} CreateUnity() <<Menu Item>>
+    +{static} Clean() <<Menu Item>>
+}
+class PackageLayout{
+    +{static}Unity(): PackageLayout
+    +{static}Min(): PackageLayout
+}
+class PackageLayoutFolder{
+   +{static}Doc(): PackageLayoutFolder
+}
+
+class PropertiesFolder
+class AsmdefFolder
+
+class PropertiesFolder
+class AssemblyInfoFile{
+    +Company
+    +Product
+    +Title
+    +Version
+    +Friends
+}
+
+class PackageLayoutCreator #technology{
+    +CreateHierarchy(:PackageLayout)
+}
+
+class Asmdef{
+    +{static}Editor(): Asmdef
+    +{static}Runtime(): Asmdef
+    +{static}TestsEditor(): Asmdef
+    +{static}TestsRuntime(): Asmdef
+}
+component Newtonsoft
+class AsmdefDeserialization
+
+
+class EditorFolderExtensions <<static>> %darken("technology", 25){
+   +{static}CleanFolder()
+   +{static}Recompile()
+   +{static}FindCurrentFolder()
+}
+
+class FolderPath <<(T, orange)>> %darken("business", 25){
+    +{static}Concat(:FolderPath)
+}
+
+note as N #gold
+    From RGV.Extensions
+end note 
+N .u. EditorFolderExtensions 
+N .d. FolderPath 
+
+class PackageLayoutFolderPath #technology{
+    +{static}CreateAsmdef(:Asmdef)
+    +{static}CreateSubfolder(:FolderPath)
+}
+
+PackageLayoutFolderPath .> Asmdef
+
+PackageLayoutMenuItems ..> PackageLayout
+PackageLayoutMenuItems ..> PackageLayoutCreator
+PackageLayoutCreator o-- "root" PackageLayoutFolderPath
+PackageLayoutCreator --> FolderPath
+PackageLayoutCreator ..> PackageLayout
+
+PackageLayoutMenuItems .r.> EditorFolderExtensions
+
+PackageLayoutFolderPath --|> FolderPath
+
+PackageLayout *-- "root" PackageLayoutFolder
+
+PackageLayoutFolder --> "relative\npath" FolderPath 
+
+PackageLayoutFolder *-- PackageLayoutFolder : "0..n Children\n0..1 Parent"
+
+AsmdefFolder -u-|> PackageLayoutFolder
+
+PropertiesFolder -u-|> PackageLayoutFolder
+PropertiesFolder *-- AssemblyInfoFile
+
+AsmdefFolder *-- Asmdef : 0..1
+Asmdef -> AsmdefDeserialization : content
+(Asmdef, AsmdefDeserialization) ..  Newtonsoft : parses
+
+@enduml

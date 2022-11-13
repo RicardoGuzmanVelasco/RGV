@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RGV.Extensions.Runtime
+namespace Assets.RGV.Extensions.Runtime.Domain
 {
     public static class StringExtensions
     {

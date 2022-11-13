@@ -1,0 +1,6 @@
+﻿{
+  "name": "com.RGV.packagelayering",
+  "version": "0.1.0",
+  "displayName": "Package layering",
+  "description": "Sirve para crear una estructura de carpetas, asmdefs, etc. a partir del menú contextual del editor"
+}

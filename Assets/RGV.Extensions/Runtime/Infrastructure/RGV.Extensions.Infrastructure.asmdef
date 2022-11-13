@@ -1,0 +1,6 @@
+{
+  "name": "RGV.Extensions.Infrastructure",
+  "references": [
+    "RGV.DesignByContract.Runtime"
+  ]
+}

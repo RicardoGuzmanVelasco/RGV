@@ -1,0 +1,19 @@
+{
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "excludePlatforms": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "name": "RGV.Extensions.Editor",
+  "noEngineReferences": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "references": [
+    "RGV.Extensions",
+    "RGV.Extensions.Infrastructure"
+  ],
+  "rootNamespace": "",
+  "versionDefines": []
+}
