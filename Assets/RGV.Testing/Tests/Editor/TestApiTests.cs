@@ -12,7 +12,7 @@ namespace RGV.Testing.Tests
         [TestCase(-1), TestCase(0), TestCase(1)]
         public void AtLeast_MoreThanTwo_Repetitions(int n)
         {
-            Action act = () => RepeatAct(Whatever!).For(n.Times());
+            Action act = () => Repeat(Whatever!).For(n.Times());
             act.Should().Throw<Exception>();
         }
 
@@ -21,7 +21,7 @@ namespace RGV.Testing.Tests
         {
             var result = 0;
 
-            RepeatAct(() => result++).For(37.Times());
+            Repeat(() => result++).For(37.Times());
 
             result.Should().Be(37);
         }

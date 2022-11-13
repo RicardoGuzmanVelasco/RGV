@@ -9,7 +9,8 @@
   "overrideReferences": false,
   "precompiledReferences": [],
   "references": [
-    "RGV.DesignByContract.Runtime"
+    "RGV.DesignByContract.Runtime",
+    "Unity.TextMeshPro"
   ],
   "rootNamespace": "",
   "versionDefines": []
