@@ -13,6 +13,19 @@ namespace RGV.Monads.Runtime
             command = operation;
         }
 
+        #region Factory methods
+        public static Task<Error> FromOk(Action action)
+        {
+            action?.Invoke();
+            return FromOk();
+        }
+
+        public static Task<Error> FromOk() => Task.FromResult(Error.None);
+
+        public static Task<Error> FromError(string id) => FromError(new Error(id));
+        public static Task<Error> FromError(Error e) => Task.FromResult(e);
+        #endregion
+
         public static Try To(Func<Task<Error>> operation)
         {
             return new Try(operation.Invoke());
@@ -39,24 +52,6 @@ namespace RGV.Monads.Runtime
         {
             return new Try(command.ContinueWith(t => t.Result.OrIfOk(operation)));
         }
-
-        public TaskAwaiter<Error> GetAwaiter()
-        {
-            return command.GetAwaiter();
-        }
-
-        #region Factory methods
-        public static Task<Error> FromOk(Action action)
-        {
-            action?.Invoke();
-            return FromOk();
-        }
-
-        public static Task<Error> FromOk() => Task.FromResult(Error.None);
-
-        public static Task<Error> FromError(string id) => FromError(new Error(id));
-        public static Task<Error> FromError(Error e) => Task.FromResult(e);
-        #endregion
 
         #region Matching
         public Task IfOk(Action operation)
@@ -85,5 +80,10 @@ namespace RGV.Monads.Runtime
             });
         }
         #endregion
+
+        public TaskAwaiter<Error> GetAwaiter()
+        {
+            return command.GetAwaiter();
+        }
     }
 }
