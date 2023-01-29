@@ -1,0 +1,26 @@
+{
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "excludePlatforms": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "name": "RGV.Monads.Tests",
+  "noEngineReferences": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll",
+    "NSubstitute.dll"
+  ],
+  "references": [
+    "UnityEngine.TestRunner",
+    "UnityEditor.TestRunner",
+    "BoundfoxStudios.FluentAssertions",
+    "RGV.Monads"
+  ],
+  "rootNamespace": "",
+  "versionDefines": []
+}

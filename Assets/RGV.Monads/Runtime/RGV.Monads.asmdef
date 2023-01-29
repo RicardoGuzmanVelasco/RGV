@@ -1,0 +1,16 @@
+{
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "excludePlatforms": [],
+  "includePlatforms": [],
+  "name": "RGV.Monads",
+  "noEngineReferences": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "references": [
+    "GUID:4f3166ce75f1424a9d8c84f49b07f6c9"
+  ],
+  "rootNamespace": "",
+  "versionDefines": []
+}
