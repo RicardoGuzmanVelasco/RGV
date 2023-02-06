@@ -50,7 +50,7 @@ namespace RGV.Math.Tests
             act.Should().ThrowExactly<ArgumentOutOfRangeException>();
         }
         #endregion
-        
+
         #region Formatting
         [Test]
         public void RomanNumeral_ToString_ByRomanSymbols()
@@ -68,7 +68,7 @@ namespace RGV.Math.Tests
             sut.Should().Be(new RomanNumeral("CMII"));
         }
         #endregion
-        
+
         #region To number, Partition & EquivalenceClasses
         [TestCase("I", 1)]
         [TestCase("V", 5)]
@@ -106,7 +106,7 @@ namespace RGV.Math.Tests
             TestEquality(symbols, number);
         }
         #endregion
-        
+
         #region From number, Partition & EquivalenceClasses
         [TestCase(1, "I")]
         [TestCase(2, "II")]
@@ -118,14 +118,14 @@ namespace RGV.Math.Tests
         {
             new RomanNumeral(number).Should().Be(new RomanNumeral(symbols));
         }
-        
+
         [TestCase(4, "IV")]
         [TestCase(900, "CM")]
         public void RomanNumeral_CreatedFromNumber_WithJustSubtractiveSymbols(int number, string symbols)
         {
             TestEquality(number, symbols);
         }
-        
+
         [TestCase(19, "XIX")]
         [TestCase(2904, "MMCMIV")]
         [TestCase(3549, "MMMDXLIX")]
@@ -134,12 +134,13 @@ namespace RGV.Math.Tests
             TestEquality(number, symbols);
         }
         #endregion
-        
+
         #region SupportMethods
         static void TestEquality(int number, string symbols)
         {
             new RomanNumeral(number).Should().Be(new RomanNumeral(symbols));
         }
+
         static void TestEquality(string symbols, int number)
         {
             int sut = new RomanNumeral(symbols);

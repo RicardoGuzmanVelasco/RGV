@@ -1,0 +1,11 @@
+{
+  "name": "com.rgv",
+  "version": "1.0.0",
+  "displayName": "RGV all in one",
+  "description": "The whole suite of packages from RGV",
+  "dependencies": {},
+  "author": {
+    "name": "RGV",
+    "email": "ricardoguzmanvelasco@outlook.com"
+  }
+}
